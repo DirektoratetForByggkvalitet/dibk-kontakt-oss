@@ -1,0 +1,825 @@
+{
+  "meta": {
+    "title": "Kontakt oss",
+    "footer": "Veiviser om du bør møte opp for kveldens middag"
+  },
+  "schema": [
+    {
+      "id": "hvemErDu",
+      "type": "Page",
+      "heading": "Kontakt oss",
+      "children": [
+        {
+          "id": "hvemErDu",
+          "property": "hvemErDu",
+          "type": "Radio",
+          "heading": "Hvem er du?",
+          "options": [
+            {
+              "id": "hvemErDu.private",
+              "type": "Answer",
+              "heading": "Privat",
+              "value": "privat"
+            },
+            {
+              "id": "hvemErDu.prof",
+              "type": "Answer",
+              "heading": "Foretak eller profesjonell",
+              "value": "proff"
+            },
+            {
+              "id": "hvemErDu.saksbehandler",
+              "type": "Answer",
+              "heading": "Saksbehandler",
+              "value": "saksbehandler"
+            }
+          ]
+        },
+        {
+          "type": "Branch",
+          "branches": [
+            {
+              "test": { "field": "hvemErDu", "operator": "eq", "value": "proff" },
+              "children": [
+                {
+                  "id": "proffHvaTrengerDu",
+                  "property": "proffHvaTrengerDu",
+                  "type": "Radio",
+                  "heading": "Hva trenger du hjelp til?",
+                  "options": [
+                    {
+                      "id": "proffHvaTrengerDu.regelverk",
+                      "type": "Answer",
+                      "heading": "Spørsmål om regelverk",
+                      "value": "regelverk"
+                    },
+                    {
+                      "id": "proffHvaTrengerDu.byggevare",
+                      "type": "Answer",
+                      "heading": "Byggevare – krav til CE-merking og dokumentasjon",
+                      "value": "byggevare"
+                    },
+                    {
+                      "id": "proffHvaTrengerDu.byggSøk",
+                      "type": "Answer",
+                      "heading": "ByggSøk",
+                      "value": "byggSøk"
+                    },
+                    {
+                      "id": "proffHvaTrengerDu.sentralGodkjenning",
+                      "type": "Answer",
+                      "heading": "Sentral godkjenning",
+                      "value": "sentralGodkjenning"
+                    },
+                    {
+                      "id": "proffHvaTrengerDu.annet",
+                      "type": "Answer",
+                      "heading": "Jeg lurer på noe annet",
+                      "value": "annet"
+                    }
+                  ]
+                },
+                {
+                  "id": "proffAnnetResult",
+                  "type": "Result",
+                  "show": { "field": "proffHvaTrengerDu", "operator": "eq", "value": "annet" },
+                  "heading": "Andre spørsmål",
+                  "lead": "<p>Har du andre spørsmål om regelverket kan du sende en epost. Hvis du lurer på X eller Y må du ta kontakt med kommunen – det kan vi dessverre ikke svare på.</p>"
+                },
+                {
+                  "id": "proffByggSøkResult",
+                  "type": "Result",
+                  "show": { "field": "proffHvaTrengerDu", "operator": "eq", "value": "byggSøk" },
+                  "heading": "ByggSøk",
+                  "lead": "<p>Åpningstider og svartid</p>"
+                },
+                {
+                  "id": "byggevareResult",
+                  "type": "Result",
+                  "show": { "field": "proffHvaTrengerDu", "operator": "eq", "value": "byggevare" },
+                  "heading": "Byggevare",
+                  "lead": "<p>Veiviser for importør, distributør og produsent</p>"
+                },
+                {
+                  "id": "proffSentralGodkjenningResult",
+                  "type": "Result",
+                  "show": { "field": "proffHvaTrengerDu", "operator": "eq", "value": "sentralGodkjenning" },
+                  "heading": "Sentral godkjenning",
+                  "lead": "<p>Finne foretak med sentral godkjenning</p><p>Søke sentral godkjenning</p><p>Åpningstider og svartid</p>"
+                },
+                {
+                  "id": "regelverkHvaVilDuViteMerOm",
+                  "property": "regelverkHvaVilDuViteMerOm",
+                  "type": "Radio",
+                  "show": { "field": "proffHvaTrengerDu", "operator": "eq", "value": "regelverk" },
+                  "heading": "Hva vil du vite mer om?",
+                  "options": [
+                    {
+                      "id": "regelverkHvaVilDuViteMerOm.ansvar",
+                      "type": "Answer",
+                      "heading": "Ansvar, utdannelse og kvalifikasjoner",
+                      "value": "ansvar"
+                    },
+                    {
+                      "id": "regelverkHvaVilDuViteMerOm.soknad",
+                      "type": "Answer",
+                      "heading": "Søknad og saksbehandling",
+                      "value": "soknad"
+                    },
+                    {
+                      "id": "regelverkHvaVilDuViteMerOm.ce",
+                      "type": "Answer",
+                      "heading": "CE-merking",
+                      "value": "ce"
+                    },
+                    {
+                      "id": "regelverkHvaVilDuViteMerOm.tek",
+                      "type": "Answer",
+                      "heading": "Byggtekniske krav (TEK) og valg av løsninger",
+                      "value": "tek"
+                    },
+                    {
+                      "type": "Reference",
+                      "nodeId": "tekTema.annet"
+                    }
+                  ]
+                },
+                {
+                  "type": "Reference",
+                  "nodeId": "byggevareResult",
+                  "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "ce" }
+                },
+                {
+                  "id": "proffByggSøkResult",
+                  "type": "Result",
+                  "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "ansvar" },
+                  "heading": "Ansvar, utdannelse og kvalifikasjoner",
+                  "lead": "<p>Vurdere selv</p>"
+                },
+                {
+                  "id": "regelverkHvaLurerDuPå",
+                  "property": "regelverkHvaLurerDuPå",
+                  "type": "Radio",
+                  "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "soknad" },
+                  "heading": "Hva lurer du på?",
+                  "options": [
+                    {
+                      "id": "regelverkHvaLurerDuPå.planer",
+                      "type": "Answer",
+                      "heading": "Reguleringsplan eller andre kommunale planer",
+                      "value": "planer"
+                    },
+                    {
+                      "id": "regelverkHvaLurerDuPå.utnytting",
+                      "type": "Answer",
+                      "heading": "Grad av utnytting",
+                      "value": "utnytting"
+                    },
+                    {
+                      "id": "regelverkHvaLurerDuPå.uavhengigKontroll",
+                      "type": "Answer",
+                      "heading": "Uavhengig kontroll",
+                      "value": "uavhengigKontroll"
+                    },
+                    {
+                      "id": "regelverkHvaLurerDuPå.søknadsplikt",
+                      "type": "Answer",
+                      "heading": "Søknadsplikt",
+                      "value": "søknadsplikt"
+                    },
+                    {
+                      "type": "Reference",
+                      "nodeId": "privatHvaTrengerDu.uenigIVedtak"
+                    }
+                  ]
+                },
+                {
+                  "id": "reguleringsplanResult",
+                  "type": "Result",
+                  "heading": "Spørsmål om reguleringsplan eller andre kommunale planer",
+                  "lead": "Disse finner du hos kommunen. Snakk med kommunen. Hvor stort kan jeg bygge.",
+                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "planer" }
+                },
+                {
+                  "id": "utnyttingResult",
+                  "type": "Result",
+                  "heading": "Grad av utnytting",
+                  "lead": "Ny veilednign! Tekst fra Rose!",
+                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "utnytting" }
+                },
+                {
+                  "id": "uavhengigKontrollResult",
+                  "type": "Result",
+                  "heading": "Uavhengig kontroll",
+                  "lead": "Her finner du ting om uavhengig kontroll... – Temaveileding hva kontrollen skal gjøre",
+                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "uavhengigKontroll" }
+                },
+                {
+                  "id": "søknadspliktResult",
+                  "type": "Result",
+                  "heading": "Søknadsplikt",
+                  "lead": "Samme som priv pluss mer?",
+                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "søknadsplikt" }
+                },
+                {
+                  "id": "uenigResult",
+                  "type": "Result",
+                  "heading": "Uenig i vedtak fra kommunen",
+                  "lead": "Snakk med kommunen eller fylkesmannen",
+                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "uenigIVedtak" }
+                },
+                {
+                  "type": "Reference",
+                  "nodeId": "proffAnnetResult",
+                  "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "annet" }
+                },
+                {
+                  "id": "tekTema",
+                  "property": "tekTema",
+                  "type": "Radio",
+                  "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "tek" },
+                  "heading": "Er det noe av dette du lurer på?",
+                  "options": [
+                    {
+                      "id": "tekTema.reglerKrav",
+                      "type": "Answer",
+                      "heading": "Regler/krav for fritidsbolig og enebolig",
+                      "value": "reglerKrav"
+                    },
+                    {
+                      "id": "tekTema.energiOgSkorstein",
+                      "type": "Answer",
+                      "heading": "Energiløsninger og skorstein",
+                      "value": "energiOgSkorstein"
+                    },
+                    {
+                      "id": "tekTema.rom",
+                      "type": "Answer",
+                      "heading": "Rom og romstørrelse",
+                      "value": "rom"
+                    },
+                    {
+                      "type": "Reference",
+                      "nodeId": "privatHvaTrengerDu.feilMangel"
+                    },
+                    {
+                      "id": "tekTema.gammeltRegelverk",
+                      "type": "Answer",
+                      "heading": "Gammelt regelverk",
+                      "value": "gammeltRegelverk"
+                    },
+                    {
+                      "id": "tekTema.annet",
+                      "type": "Answer",
+                      "heading": "Jeg lurer på noe annet",
+                      "value": "annet"
+                    }
+                  ]
+                },
+                {
+                  "id": "reglerKravResult",
+                  "type": "Result",
+                  "show": { "field": "tekTema", "operator": "eq", "value": "reglerKrav" },
+                  "heading": "Regler/krav for fritidsbolig og enebolig",
+                  "lead": "blabla"
+                },
+                {
+                  "id": "energiOgSkorsteinResult",
+                  "type": "Result",
+                  "show": { "field": "tekTema", "operator": "eq", "value": "energiOgSkorstein" },
+                  "heading": "Energi og skorstein 🏭",
+                  "lead": "Vær snill"
+                },
+                {
+                  "id": "romResult",
+                  "type": "Result",
+                  "show": { "field": "tekTema", "operator": "eq", "value": "rom" },
+                  "heading": "Rom og romstørrelse",
+                  "lead": "Må ha plass og rom, ja"
+                },
+                {
+                  "type": "Reference",
+                  "nodeId": "feilMangelBranch",
+                  "show": { "field": "tekTema", "operator": "eq", "value": "feilMangel" }
+                },
+                {
+                  "id": "gammeltRegelverkResult",
+                  "type": "Result",
+                  "show": { "field": "tekTema", "operator": "eq", "value": "gammeltRegelverk" },
+                  "heading": "Gammelt regelverk?",
+                  "lead": "Se oversikt over tidligere regelverk her"
+                },
+                {
+                  "type": "Reference",
+                  "nodeId": "proffAnnetResult",
+                  "show": { "field": "tekTema", "operator": "eq", "value": "annet" }
+                }
+              ]
+            },
+            {
+              "test": { "field": "hvemErDu", "operator": "eq", "value": "privat" },
+              "children": [
+                {
+                  "id": "privatHvaTrengerDu",
+                  "property": "privatHvaTrengerDu",
+                  "type": "Radio",
+                  "heading": "Hva trenger du hjelp til?",
+                  "options": [
+                    {
+                      "id": "privatHvaTrengerDu.sokeOgVarsle",
+                      "type": "Answer",
+                      "heading": "Byggesøknad og nabovarsel",
+                      "value": "sokeOgVarsle"
+                    },
+                    {
+                      "id": "privatHvaTrengerDu.omJegMåSøke",
+                      "type": "Answer",
+                      "heading": "Finne ut om jeg må søke",
+                      "value": "omJegMåSøke"
+                    },
+                    {
+                      "id": "privatHvaTrengerDu.kommunalePlaner",
+                      "type": "Answer",
+                      "heading": "Spørsmål om kommunale planer",
+                      "value": "kommunalePlaner"
+                    },
+                    {
+                      "id": "privatHvaTrengerDu.uenigIVedtak",
+                      "type": "Answer",
+                      "heading": "Uenig i et vedtak fra kommunen",
+                      "value": "uenigIVedtak"
+                    },
+                    {
+                      "id": "privatHvaTrengerDu.feilMangel",
+                      "type": "Answer",
+                      "heading": "Finne ut om boligen min har feil eller mangler",
+                      "value": "feilMangel"
+                    }
+                  ]
+                },
+                {
+                  "id": "sokeOgVarsleResult",
+                  "type": "Result",
+                  "show": { "field": "privatHvaTrengerDu", "operator": "eq", "value": "sokeOgVarsle" },
+                  "heading": "Byggesøknad og nabovarsel",
+                  "lead": "Åtte steg og enklere byggesøknad temaside nabovarsel"
+                },
+                {
+                  "type": "Reference",
+                  "nodeId": "reguleringsplanResult",
+                  "show": { "field": "privatHvaTrengerDu", "operator": "eq", "value": "kommunalePlaner" }
+                },
+                {
+                  "type": "Reference",
+                  "nodeId": "uenigResult",
+                  "show": { "field": "privatHvaTrengerDu", "operator": "eq", "value": "uenigIVedtak" }
+                },
+                {
+                  "id": "feilMangelBranch",
+                  "type": "Branch",
+                  "branches": [
+                    {
+                      "test": {
+                        "type": "or",
+                        "clauses": [
+                          { "field": "privatHvaTrengerDu", "operator": "eq", "value": "feilMangel" },
+                          { "field": "tekTema", "operator": "eq", "value": "feilMangel" }
+                        ]
+                      },
+                      "children": [
+                        {
+                          "id": "hvilketRegelverk",
+                          "property": "hvilketRegelverk",
+                          "type": "Radio",
+                          "heading": "Hvilket regelverk gjelder for bygningen?",
+                          "options": [
+                            {
+                              "id": "hvilketRegelverk.eldreRegelverk",
+                              "type": "Answer",
+                              "heading": "Eldre regelverk",
+                              "value": "eldreRegelverk"
+                            },
+                            {
+                              "id": "hvilketRegelverk.tek10eller17",
+                              "type": "Answer",
+                              "heading": "TEK10 eller TEK17",
+                              "value": "tek10eller17"
+                            },
+                            {
+                              "id": "hvilketRegelverk.vetIkke",
+                              "type": "Answer",
+                              "heading": "Vet ikke",
+                              "value": "vetIkke"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "eldreRegelverkResult",
+                          "type": "Result",
+                          "show": { "field": "hvilketRegelverk", "operator": "eq", "value": "eldreRegelverk" },
+                          "heading": "Malsvar eldreRegelverk"
+                        },
+                        {
+                          "id": "tek10eller17Result",
+                          "type": "Result",
+                          "show": { "field": "hvilketRegelverk", "operator": "eq", "value": "tek10eller17" },
+                          "heading": "Malsvar tek10eller17"
+                        },
+                        {
+                          "id": "vetIkkeResult",
+                          "type": "Result",
+                          "show": { "field": "hvilketRegelverk", "operator": "eq", "value": "vetIkke" },
+                          "heading": "Malsvar vetIkke"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "hvaSkalDuGjøre",
+                  "property": "hvaSkalDuGjøre",
+                  "type": "Radio",
+                  "show": { "field": "privatHvaTrengerDu", "operator": "eq", "value": "omJegMåSøke" },
+                  "heading": "Hva skal du gjøre?",
+                  "options": [
+                    {
+                      "id": "hvaSkalDuGjøre.endreAvkjørsel",
+                      "type": "Answer",
+                      "heading": "Endre avkjørsel",
+                      "value": "endreAvkjørsel"
+                    },
+                    {
+                      "id": "hvaSkalDuGjøre.frittliggende",
+                      "type": "Answer",
+                      "heading": "Bygge garasje, bod, drivhus, anneks, veksted, kontor, atelier, eller annen frittliggende bygning",
+                      "value": "frittliggende"
+                    },
+                    {
+                      "id": "hvaSkalDuGjøre.tilbygg",
+                      "type": "Answer",
+                      "heading": "Bygge terrasse, platting, veranda, takterrasse eller et tilbygg (f.eks. bod, sykkelskur eller trapperom)",
+                      "value": "tilbygg"
+                    },
+                    {
+                      "id": "hvaSkalDuGjøre.bruksendring",
+                      "type": "Answer",
+                      "heading": "Endre et rom i boligen min, f.eks. fra bod til stue (bruksendring)",
+                      "value": "bruksendring"
+                    },
+                    {
+                      "id": "hvaSkalDuGjøre.bygge",
+                      "type": "Answer",
+                      "heading": "Bygge enebolig eller fritidsbolig",
+                      "value": "bygge"
+                    },
+                    {
+                      "id": "hvaSkalDuGjøre.annet",
+                      "type": "Answer",
+                      "heading": "Jeg lurer på noe annet",
+                      "value": "annet"
+                    }
+                  ]
+                },
+                {
+                  "id": "endreAvkjørselResult",
+                  "type": "Result",
+                  "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "endreAvkjørsel" },
+                  "heading": "endreAvkjørsel resultat"
+                },
+                {
+                  "id": "frittliggendeResult",
+                  "type": "Result",
+                  "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "frittliggende" },
+                  "heading": "frittliggende resultat"
+                },
+                {
+                  "id": "tilbyggResult",
+                  "type": "Result",
+                  "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "tilbygg" },
+                  "heading": "tilbygg resultat"
+                },
+                {
+                  "id": "bruksendringResult",
+                  "type": "Result",
+                  "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "bruksendring" },
+                  "heading": "bruksendring resultat"
+                },
+                {
+                  "id": "byggeResult",
+                  "type": "Result",
+                  "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "bygge" },
+                  "heading": "bygge resultat"
+                },
+                {
+                  "id": "annetResult",
+                  "type": "Result",
+                  "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "annet" },
+                  "heading": "annet resultat"
+                }
+              ]
+            },
+            {
+              "test": { "field": "hvemErDu", "operator": "eq", "value": "saksbehandler" },
+              "children": [
+                {
+                  "id": "saksbehandlerHvaTrengerDu",
+                  "property": "saksbehandlerHvaTrengerDu",
+                  "type": "Radio",
+                  "heading": "Hva trenger du hjelp til?",
+                  "options": [
+                    {
+                      "id": "saksbehandlerHvaTrengerDu.utnytting",
+                      "type": "Answer",
+                      "heading": "Utnytting",
+                      "value": "utnytting"
+                    },
+                    {
+                      "id": "saksbehandlerHvaTrengerDu.planer",
+                      "type": "Answer",
+                      "heading": "Planer",
+                      "value": "planer"
+                    },
+                    {
+                      "id": "saksbehandlerHvaTrengerDu.tilsyn",
+                      "type": "Answer",
+                      "heading": "Tilsyn",
+                      "value": "tilsyn"
+                    },
+                    {
+                      "id": "saksbehandlerHvaTrengerDu.saksbehandling",
+                      "type": "Answer",
+                      "heading": "Saksbehandling",
+                      "value": "saksbehandling"
+                    },
+                    {
+                      "id": "saksbehandlerHvaTrengerDu.søknadsplikt",
+                      "type": "Answer",
+                      "heading": "Søknadsplikt",
+                      "value": "søknadsplikt"
+                    },
+                    {
+                      "id": "saksbehandlerHvaTrengerDu.annet",
+                      "type": "Answer",
+                      "heading": "Jeg lurer på noe annet",
+                      "value": "annet"
+                    }
+                  ]
+                },
+                {
+                  "id": "saksbehandlerUtnyttingResult",
+                  "type": "Result",
+                  "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "utnytting" },
+                  "heading": "utnytting resultatside",
+                  "text": "Om grad av utnytting"
+                },
+                {
+                  "id": "saksbehandlerPlanerResult",
+                  "type": "Result",
+                  "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "planer" },
+                  "heading": "planer resultatside",
+                  "text": "Om planer"
+                },
+                {
+                  "id": "saksbehandlerTilsynResult",
+                  "type": "Result",
+                  "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "tilsyn" },
+                  "heading": "tilsyn resultatside",
+                  "text": "Om tilsyn"
+                },
+                {
+                  "id": "saksbehandlerSaksbehandlingResult",
+                  "type": "Result",
+                  "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "saksbehandling" },
+                  "heading": "saksbehandling resultatside",
+                  "text": "Om saksbehandling"
+                },
+                {
+                  "id": "saksbehandlerAnnetResult",
+                  "type": "Result",
+                  "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "annet" },
+                  "heading": "annet resultatside",
+                  "text": "Om annet"
+                },
+                {
+                  "id": "saksbehandlerSøknadspliktBranch",
+                  "type": "Branch",
+                  "branches": [
+                    {
+                      "test": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "søknadsplikt" },
+                      "children": [
+                        {
+                          "id": "byggesaksbehandler",
+                          "property": "byggesaksbehandler",
+                          "type": "Radio",
+                          "heading": "Er du byggesaksbehandler?",
+                          "options": [
+                            {
+                              "id": "byggesaksbehandler.ja",
+                              "type": "Answer",
+                              "heading": "Ja",
+                              "value": true
+                            },
+                            {
+                              "id": "byggesaksbehandler.nei",
+                              "type": "Answer",
+                              "heading": "Nei",
+                              "value": false
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ikkeByggesaksbehandlerResult",
+                          "type": "Result",
+                          "show": { "field": "byggesaksbehandler", "operator": "eq", "value": false },
+                          "heading": "Skal du vurdere om noe er søknadspliktig?",
+                          "lead": "Masse masse tekst"
+                        },
+                        {
+                          "id": "pbl201",
+                          "property": "pbl201",
+                          "type": "Radio",
+                          "heading": "Er det et tiltak etter plan og byggningsloven §20-1?",
+                          "show": { "field": "byggesaksbehandler", "operator": "required" },
+                          "options": [
+                            {
+                              "id": "pbl201.ja",
+                              "type": "Answer",
+                              "heading": "Ja",
+                              "value": "ja"
+                            },
+                            {
+                              "id": "pbl201.nei",
+                              "type": "Answer",
+                              "heading": "Nei",
+                              "value": "nei"
+                            },
+                            {
+                              "id": "pbl201.vetIkke",
+                              "type": "Answer",
+                              "heading": "Vet ikke",
+                              "value": "vetIkke"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "pbl201VetIkkeResult",
+                          "type": "Result",
+                          "show": { "field": "pbl201", "operator": "eq", "value": "vetIkke" },
+                          "heading": "Vi kan ikke vurdere for deg",
+                          "lead": "lang tekst her"
+                        },
+                        {
+                          "id": "pbl201Branch",
+                          "type": "Branch",
+                          "show": { "field": "pbl201", "operator": "eq", "value": "required" },
+                          "branches": [
+                            {
+                              "test": { "field": "pbl201", "operator": "eq", "value": "ja" },
+                              "children": [
+                                {
+                                  "id": "unntakFraSøknadsplikt",
+                                  "property": "unntakFraSøknadsplikt",
+                                  "type": "Radio",
+                                  "heading": "Finnes det et unntak fra søknadsplikten? Se i kapittel 20 i plan og bygningsloven og SAK10 kapittel 4.",
+                                  "options": [
+                                    {
+                                      "id": "unntakFraSøknadsplikt.ja",
+                                      "type": "Answer",
+                                      "heading": "Ja",
+                                      "value": "ja"
+                                    },
+                                    {
+                                      "id": "unntakFraSøknadsplikt.nei",
+                                      "type": "Answer",
+                                      "heading": "Nei",
+                                      "value": "nei"
+                                    },
+                                    {
+                                      "id": "unntakFraSøknadsplikt.usikker",
+                                      "type": "Answer",
+                                      "heading": "Usikker",
+                                      "value": "usikker"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "unntakFraSøknadspliktNeiResult",
+                                  "type": "Result",
+                                  "show": { "field": "unntakFraSøknadsplikt", "operator": "eq", "value": "nei" },
+                                  "heading": "Det er søknadspliktig"
+                                },
+                                {
+                                  "id": "unntakFraSøknadspliktUsikkerResult",
+                                  "type": "Result",
+                                  "show": { "field": "unntakFraSøknadsplikt", "operator": "eq", "value": "usikker" },
+                                  "heading": "Andre regler. Kontakt ansvarlig myndighet"
+                                },
+                                {
+                                  "id": "vilkårUnntakOppfylt",
+                                  "property": "vilkårUnntakOppfylt",
+                                  "type": "Radio",
+                                  "show": { "field": "unntakFraSøknadsplikt", "operator": "eq", "value": "ja" },
+                                  "heading": "Er vilkårene for unntaket oppfylt?",
+                                  "options": [
+                                    {
+                                      "id": "vilkårUnntakOppfylt.ja",
+                                      "type": "Answer",
+                                      "heading": "Ja",
+                                      "value": "ja"
+                                    },
+                                    {
+                                      "id": "vilkårUnntakOppfylt.nei",
+                                      "type": "Answer",
+                                      "heading": "Nei",
+                                      "value": "nei"
+                                    },
+                                    {
+                                      "id": "vilkårUnntakOppfylt.usikker",
+                                      "type": "Answer",
+                                      "heading": "Usikker",
+                                      "value": "usikker"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "vilkårUnntakOppfyltJaResult",
+                                  "type": "Result",
+                                  "show": { "field": "vilkårUnntakOppfylt", "operator": "eq", "value": "ja" },
+                                  "heading": "Det er ikke søknadspliktig",
+                                  "lead": "...forutsatt samsvar med plan"
+                                },
+                                {
+                                  "id": "vilkårUnntakOppfyltNeiResult",
+                                  "type": "Result",
+                                  "show": { "field": "vilkårUnntakOppfylt", "operator": "eq", "value": "nei" },
+                                  "heading": "Det er søknadspliktig"
+                                },
+                                {
+                                  "type": "Reference",
+                                  "nodeId": "unntakFraSøknadspliktUsikkerResult",
+                                  "show": { "field": "vilkårUnntakOppfylt", "operator": "eq", "value": "usikker" }
+                                }
+                              ]
+                            },
+                            {
+                              "test": { "field": "pbl201", "operator": "eq", "value": "nei" },
+                              "children": [
+                                {
+                                  "id": "iStridMedPlan",
+                                  "property": "iStridMedPlan",
+                                  "type": "Radio",
+                                  "heading": "Er det som gjøres i strid med plan?",
+                                  "options": [
+                                    {
+                                      "id": "iStridMedPlan.ja",
+                                      "type": "Answer",
+                                      "heading": "Ja",
+                                      "value": "ja"
+                                    },
+                                    {
+                                      "id": "iStridMedPlan.nei",
+                                      "type": "Answer",
+                                      "heading": "Nei",
+                                      "value": "nei"
+                                    },
+                                    {
+                                      "id": "iStridMedPlan.vetIkke",
+                                      "type": "Answer",
+                                      "heading": "Vet ikke",
+                                      "value": "vetIkke"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "iStridMedPlanVetIkkeResult",
+                                  "type": "Result",
+                                  "show": { "field": "iStridMedPlan", "operator": "eq", "value": "vetIkke" },
+                                  "heading": "vet ikke"
+                                },
+                                {
+                                  "id": "iStridMedPlanJaResult",
+                                  "type": "Result",
+                                  "show": { "field": "iStridMedPlan", "operator": "eq", "value": "ja" },
+                                  "heading": "Må søke disp"
+                                },
+                                {
+                                  "id": "iStridMedPlanNeiResult",
+                                  "type": "Result",
+                                  "heading": "Det er ikke søknadspliktig"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
