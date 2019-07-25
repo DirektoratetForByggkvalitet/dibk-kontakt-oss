@@ -16,22 +16,21 @@
           "heading": "Hvem er du?",
           "options": [
             {
-              "id": "hvemErDu.private",
+              "id": "hvemErDu.saksbehandler",
               "type": "Answer",
-              "heading": "Privat",
-              "value": "privat"
-            },
-            {
+              "heading": "Saksbehandler",
+              "value": "saksbehandler"
+            },            {
               "id": "hvemErDu.prof",
               "type": "Answer",
               "heading": "Foretak eller profesjonell",
               "value": "proff"
             },
             {
-              "id": "hvemErDu.saksbehandler",
+              "id": "hvemErDu.private",
               "type": "Answer",
-              "heading": "Saksbehandler",
-              "value": "saksbehandler"
+              "heading": "Privatperson",
+              "value": "privat"
             }
           ]
         },
@@ -50,20 +49,8 @@
                     {
                       "id": "proffHvaTrengerDu.regelverk",
                       "type": "Answer",
-                      "heading": "Spørsmål om regelverk",
+                      "heading": "Spørsmål om regelverket",
                       "value": "regelverk"
-                    },
-                    {
-                      "id": "proffHvaTrengerDu.byggevare",
-                      "type": "Answer",
-                      "heading": "Byggevare – krav til CE-merking og dokumentasjon",
-                      "value": "byggevare"
-                    },
-                    {
-                      "id": "proffHvaTrengerDu.byggSøk",
-                      "type": "Answer",
-                      "heading": "ByggSøk",
-                      "value": "byggSøk"
                     },
                     {
                       "id": "proffHvaTrengerDu.sentralGodkjenning",
@@ -72,9 +59,21 @@
                       "value": "sentralGodkjenning"
                     },
                     {
+                      "id": "proffHvaTrengerDu.byggSøk",
+                      "type": "Answer",
+                      "heading": "ByggSøk",
+                      "value": "byggSøk"
+                    },
+                    {
+                      "id": "proffHvaTrengerDu.byggevare",
+                      "type": "Answer",
+                      "heading": "CE-merking og dokumentasjon av byggevarer",
+                      "value": "byggevare"
+                    },
+                    {
                       "id": "proffHvaTrengerDu.annet",
                       "type": "Answer",
-                      "heading": "Jeg lurer på noe annet",
+                      "heading": "Noe annet",
                       "value": "annet"
                     }
                   ]
@@ -83,29 +82,63 @@
                   "id": "proffAnnetResult",
                   "type": "Result",
                   "show": { "field": "proffHvaTrengerDu", "operator": "eq", "value": "annet" },
-                  "heading": "Andre spørsmål",
-                  "lead": "<p>Har du andre spørsmål om regelverket kan du sende en epost. Hvis du lurer på X eller Y må du ta kontakt med kommunen – det kan vi dessverre ikke svare på.</p>"
-                },
+                  "heading": "Kontakt oss",
+                  "children": [
+                  {
+                     "id": "infoKontaktOss",
+                     "type": "Group",
+                     "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                     "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                      }
+                    ]
+                  },
                 {
                   "id": "proffByggSøkResult",
                   "type": "Result",
                   "show": { "field": "proffHvaTrengerDu", "operator": "eq", "value": "byggSøk" },
-                  "heading": "ByggSøk",
-                  "lead": "<p>Åpningstider og svartid</p>"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                       "id": "infoKontaktOssBygggSøk",
+                       "type": "Group",
+                       "heading": "Har du spørsmål om ByggSøk?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om hvordan å bruke ByggSøk. Vi tar ikke stilling til og vurderer ikke konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "byggevareResult",
                   "type": "Result",
                   "show": { "field": "proffHvaTrengerDu", "operator": "eq", "value": "byggevare" },
-                  "heading": "Byggevare",
-                  "lead": "<p>Veiviser for importør, distributør og produsent</p>"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Leter du etter noe av dette?",
+                      "text": "<p><ul><li><a href=\"https://dibk.no/byggevarer\" target=\"_blank\">Sjekke hvilke krav til dokumentasjon som gjelder ditt produkt </a></li><li><a href=\"https://dibk.no/byggevarer/tipsskjema\" target=\"_blank\">Tipse om ulovlig omsetning av byggevarer</a></li><li><a href=\"https://dibk.no/byggevarer/heis--og-lofteinnretninger\" target=\"_blank\">Regelverk for heis- og løfteinnretninger </a></li><li><a href=\"https://dibk.no/byggevarer/nytt-om-byggevareforordningen\" target=\"_blank\">Nytt om byggevareforordningen</a></li></ul></p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
-                  "id": "proffSentralGodkjenningResult",
+                  "id": "proffSGResult",
                   "type": "Result",
                   "show": { "field": "proffHvaTrengerDu", "operator": "eq", "value": "sentralGodkjenning" },
-                  "heading": "Sentral godkjenning",
-                  "lead": "<p>Finne foretak med sentral godkjenning</p><p>Søke sentral godkjenning</p><p>Åpningstider og svartid</p>"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                       "id": "infoKontaktOssSG",
+                       "type": "Group",
+                       "heading": "Har du spørsmål om sentral godkjenning?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om sentral godkjenning og byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "regelverkHvaVilDuViteMerOm",
@@ -115,15 +148,27 @@
                   "heading": "Hva vil du vite mer om?",
                   "options": [
                     {
+                      "id": "regelverkHvaVilDuViteMerOm.tek",
+                      "type": "Answer",
+                      "heading": "Byggtekniske krav (TEK) og valg av løsninger",
+                      "value": "tek"
+                    },
+                    {
                       "id": "regelverkHvaVilDuViteMerOm.ansvar",
                       "type": "Answer",
                       "heading": "Ansvar, utdannelse og kvalifikasjoner",
                       "value": "ansvar"
                     },
                     {
+                      "id": "regelverkHvaLurerDuPå.uavhengigKontroll",
+                      "type": "Answer",
+                      "heading": "Uavhengig kontroll",
+                      "value": "uavhengigKontroll"
+                    },
+                    {
                       "id": "regelverkHvaVilDuViteMerOm.soknad",
                       "type": "Answer",
-                      "heading": "Søknad og saksbehandling",
+                      "heading": "Byggesøknad og saksbehandling",
                       "value": "soknad"
                     },
                     {
@@ -132,12 +177,7 @@
                       "heading": "CE-merking",
                       "value": "ce"
                     },
-                    {
-                      "id": "regelverkHvaVilDuViteMerOm.tek",
-                      "type": "Answer",
-                      "heading": "Byggtekniske krav (TEK) og valg av løsninger",
-                      "value": "tek"
-                    },
+
                     {
                       "type": "Reference",
                       "nodeId": "tekTema.annet"
@@ -150,11 +190,43 @@
                   "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "ce" }
                 },
                 {
-                  "id": "proffByggSøkResult",
+                  "id": "proffAnsvarResult",
                   "type": "Result",
                   "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "ansvar" },
-                  "heading": "Ansvar, utdannelse og kvalifikasjoner",
-                  "lead": "<p>Vurdere selv</p>"
+                  "heading": "Kontakt oss",
+                   "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "text": "<h3>Lurer du på om utdanningen og erfaringen til faglig ledelse er tilstrekkelig og relevant?</h3><p>Når et foretak skal erklære ansvar, skal foretaket selv vurdere om den faglige ledelsen har nødvendig kompetanse for jobben. Du/dere må selv vurdere om utdanningen og praksisen til den faglige ledelsen er både tilstrekkelig og relevant for de fagområdene og oppgavene foretaket ønsker å påta seg ansvar for i byggeprosjektet.</p><p>Dersom du ønsker å få vurdert om faglig ledelse har tilstrekkelig utdanning og praksis, kan du/dere vurdere å søke om sentral godkjenning for ansvarsrett. Sentral godkjenning er en frivillig ordning som viser at foretaket oppfyller kravene til faglige kvalifikasjoner, rutiner for kvalitetssikring og seriøsitet. <a href=\"https://dibk.no/sentral-godkjenning\" target=\"_blank\">Les mer om sentral godkjenning på våre nettsider.</a></p><h3>Lurer du på om foretaket ditt kan erklære ansvar?</h3><p>Hvis du vet hvor lang relevant utdanning og relevant praksis den faglige ledelsen har, kan du prøve veiviseren  <a href=\"https://dibk.no/verktoy-og-veivisere/veiviser_ansvar\" target=\"_blank\">”Finn ut om du kan erklære ansvar”</a>. Er foretaket kvalifisert, får du hjelp til å lage en erklæring for ansvarsrett som du kan skrive ut, signere og sende til ansvarlig søker. Mangler foretaket kompetanse, får du hjelp til å finne ut om du kan søke kommunen om ansvarsrett.<br/><br/>Du kan lese mer om krav til utdanning og praksis i <a href=\" https://dibk.no/byggeregler/sak/3/11/innledning\" target=\"_blank\">byggesaksforskriften (SAK10) kapittel 11.</a></p><h3>Har du spørsmål om utenlandsk utdanning og praksis?</h3><p>Der utdanningen og/eller praksis er fra et annet EØS-land, skal utdanningen og/eller praksisen som hovedregel aksepteres på lik linje med norsk. Det er mulig å søke NOKUT om godkjenning av enkelte utdanninger som er gjennomført i utlandet.  <a href=\"https://www.nokut.no/soknader--utdanning-fra-utlandet\" target=\"_blank\">Les mer om dette på NOKUTs nettsider.</a></p>  " 
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
+                },
+                {
+                  "id": "uavhengigKontrollResult",
+                  "type": "Result",
+                  "heading": "Kontakt oss",
+                  "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "uavhengigKontroll" },
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på noe av dette?",
+                      "text": "<p><ul><li><a href=\"https://dibk.no/saksbehandling/kommunalt-tilsyn/temaveiledninger/temaveileder-uavhengig-kontroll/5.-gjennomforing-av-kontroll/5.2.-kontroll-av-prosjektering-og-utforelse/5.2.2.-boliger---fuktsikring-og-lufttetthet\" target=\"_blank\">Krav til kontroll av fuktsikring for våtrom og lufttetthet i boliger</a></li><li><a href=\"https://dibk.no/saksbehandling/kommunalt-tilsyn/temaveiledninger/temaveileder-uavhengig-kontroll/5.-gjennomforing-av-kontroll/5.2.-kontroll-av-prosjektering-og-utforelse/5.2.3.-obligatoriske-kontrollomrader--\" target=\"_blank\">Obligatoriske kontrollområder i tiltaksklasse 2 og 3</a></li><li><a href=\"https://dibk.no/saksbehandling/uavhengig-kontroll/avklaringer-om-uavhengig-kontroll\" target=\"_blank\">Avklaringer fra Direktoratet for byggkvalitet om kontroll av våtrom og eksisterende byggverk, selvstendighet for kontrollforetak og avviksbehandling</a></li><li><a href=\"https://dibk.no/saksbehandling/kommunalt-tilsyn/temaveiledninger/temaveileder-uavhengig-kontroll\" target=\"_blank\">Temaveiledning - uavhengig kontroll</a></li></ul></p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "regelverkHvaLurerDuPå",
@@ -176,15 +248,9 @@
                       "value": "utnytting"
                     },
                     {
-                      "id": "regelverkHvaLurerDuPå.uavhengigKontroll",
-                      "type": "Answer",
-                      "heading": "Uavhengig kontroll",
-                      "value": "uavhengigKontroll"
-                    },
-                    {
                       "id": "regelverkHvaLurerDuPå.søknadsplikt",
                       "type": "Answer",
-                      "heading": "Søknadsplikt",
+                      "heading": "Søknader og søknadsplikt",
                       "value": "søknadsplikt"
                     },
                     {
@@ -196,56 +262,101 @@
                 {
                   "id": "reguleringsplanResult",
                   "type": "Result",
-                  "heading": "Spørsmål om reguleringsplan eller andre kommunale planer",
-                  "lead": "Disse finner du hos kommunen. Snakk med kommunen. Hvor stort kan jeg bygge.",
-                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "planer" }
+                  "heading": "Kontakt oss",
+                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "planer" },
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "text": "<p><h3>Trenger du hjelp til å tolke en plan?</h3>Dette er et spørsmål du må stille til kommunen du skal bygge i. Svaret avhenger av bestemmelser i kommunens planer, for eksempel i kommuneplanen eller reguleringsplanen som gjelder for eiendommen. Det er kommunen som er ansvarlig for disse planene. Kommunen må derfor selv forklare hvordan innholdet i for eksempel kart eller bestemmelser skal tolkes.</p><p><h3>Trenger du hjelp til å lage en plan?</h3>Planavdelingen i Kommunal- og moderniseringsdepartementet er øverste myndighet for reguleringsplaner. De har blant annet veiledninger for profesjonelle som skal lage forslag til reguleringsplaner. <a href=\"https://www.regjeringen.no/no/tema/plan-bygg-og-eiendom/plan--og-bygningsloven/plan/veiledning-om-planlegging/pblveiledere/id2009055\" target=\"_blank\">Du finner disse på planavdelingens nettsider. </a><p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "utnyttingResult",
                   "type": "Result",
-                  "heading": "Grad av utnytting",
-                  "lead": "Ny veilednign! Tekst fra Rose!",
-                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "utnytting" }
-                },
-                {
-                  "id": "uavhengigKontrollResult",
-                  "type": "Result",
-                  "heading": "Uavhengig kontroll",
-                  "lead": "Her finner du ting om uavhengig kontroll... – Temaveileding hva kontrollen skal gjøre",
-                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "uavhengigKontroll" }
+                  "heading": "Kontakt oss",
+                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "utnytting" },
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "text": "<p><h3>Trenger du hjelp til å lage en plan?</h3>Planavdelingen i Kommunal- og moderniseringsdepartementet er øverste myndighet for reguleringsplaner. De har blant annet veiledninger for profesjonelle som skal lage forslag til reguleringsplaner. <a href=\"https://www.regjeringen.no/no/tema/plan-bygg-og-eiendom/plan--og-bygningsloven/plan/veiledning-om-planlegging/pblveiledere/id2009055\" target=\"_blank\">Du finner disse på planavdelingens nettsider. </a></p><p><h3>Skal du  tolke en reguleringsplan eller annen plan?</h3>Det er kommunen som er ansvarlig for disse planene og som må forklare innholdet i for eksempel kart eller bestemmelser. Svaret avhenger av bestemmelser i kommunens planer, for eksempel i kommuneplanen eller reguleringsplanen som gjelder for eiendommen.</p><p><h3>Hva kan planene kan inneholde?</h3>Noen eksempler på hva planene kan regulere, er hvor stort det kan bygges på tomta, hvor høy en bygning kan være, hvor mange parkeringsplasser du må ha eller hvilke byggegrenser som finnes på eiendommen. Slike bestemmelser utfyller plankartet og definerer hvordan områdene kan brukes, hva som kan bygges, hva som skal bevares og så videre.</p><p><h3>Hva er en rekkefølgebestemmelse?</h3>Det kan også finnes en detaljplan for et område. Denne kan for eksempel si noe om opparbeidelse av vei eller lekeplass før man kan få lov til å bygge. Dette kalles rekkefølgebestemmelser. En reguleringsplan er rettslig bindende for arealbruken i området. Dette betyr at den må følges. Hvis du skal bygge noe på en eiendom, eventuelt dele en eiendom, vil altså arealplanen(e) gi deg svar på hva som kan tillates og hva som ikke kan tillates.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "søknadspliktResult",
                   "type": "Result",
-                  "heading": "Søknadsplikt",
-                  "lead": "Samme som priv pluss mer?",
-                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "søknadsplikt" }
+                  "heading": "Kontakt oss",
+                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "søknadsplikt" },
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på noe av dette?",
+                      "text": "<p><ul><li><a href=\"https://dibk.no/saksbehandling/byggesaksbehandling-i-praksis/Soknadsplikt\" target=\"_blank\">Om søknadsplikt og unntak fra søknadsplikten </a></li><li><a href=\"https://dibk.no/saksbehandling/byggesaksbehandling-i-praksis/Krav-til-soknad\" target=\"_blank\">Krav til byggesøknaden </a></li><li><a href=\"https://dibk.no/saksbehandling/byggsok/Byggesaksblanketter\" target=\"_blank\">Oversikt over alle byggesaksblanketter </a></li><li><a href=\"https://dibk.no/bygge-selv/slik-varsler-du-naboene\" target=\"_blank\">Alt om nabovarsling</a></li><li><a href=\"https://dibk.no/bygge-selv/dette-kan-du-bygge-uten-a-soke\" target=\"_blank\">Dette kan du bygge uten å søke kommunen om tillatelse</a></li><li><a href=\"https://dibk.no/saksbehandling/byggesaksbehandling-i-praksis/sporsmal-og-svar-om-byggsaksbehandling\" target=\"_blank\">Spørsmål og svar om byggesaksbehandling </a></li></ul></p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "uenigResult",
                   "type": "Result",
-                  "heading": "Uenig i vedtak fra kommunen",
-                  "lead": "Snakk med kommunen eller fylkesmannen",
-                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "uenigIVedtak" }
+                  "heading": "Kontakt oss",
+                  "show": { "field": "regelverkHvaLurerDuPå", "operator": "eq", "value": "uenigIVedtak" },
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Har du fått et vedtak fra kommunen du er uenig i?",
+                      "text": "<p>Du kan klage på kommunens vedtak. Klagen sender du til kommunen, som da må vurdere saken din på nytt. Hvis kommunen ikke endrer vedtaket sitt, avgjør fylkesmannen saken. Du kan også spørre fylkesmannen om de har behandlet lignende saker tidligere.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "type": "Reference",
                   "nodeId": "proffAnnetResult",
-                  "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "annet" }
+                  "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "annet" },
+                  "children": [
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "tekTema",
                   "property": "tekTema",
                   "type": "Radio",
                   "show": { "field": "regelverkHvaVilDuViteMerOm", "operator": "eq", "value": "tek" },
-                  "heading": "Er det noe av dette du lurer på?",
+                  "heading": "Lurer du på noe av dette?",
                   "options": [
-                    {
-                      "id": "tekTema.reglerKrav",
-                      "type": "Answer",
-                      "heading": "Regler/krav for fritidsbolig og enebolig",
-                      "value": "reglerKrav"
-                    },
                     {
                       "id": "tekTema.energiOgSkorstein",
                       "type": "Answer",
@@ -255,8 +366,14 @@
                     {
                       "id": "tekTema.rom",
                       "type": "Answer",
-                      "heading": "Rom og romstørrelse",
+                      "heading": "Krav til rom og romstørrelse",
                       "value": "rom"
+                    },
+                    {
+                      "id": "tekTema.reglerKrav",
+                      "type": "Answer",
+                      "heading": "Byggtekniske krav til fritidsbolig og enebolig",
+                      "value": "reglerKrav"
                     },
                     {
                       "type": "Reference",
@@ -265,13 +382,13 @@
                     {
                       "id": "tekTema.gammeltRegelverk",
                       "type": "Answer",
-                      "heading": "Gammelt regelverk",
+                      "heading": "Finne gammelt regelverk",
                       "value": "gammeltRegelverk"
                     },
                     {
                       "id": "tekTema.annet",
                       "type": "Answer",
-                      "heading": "Jeg lurer på noe annet",
+                      "heading": "Noe annet",
                       "value": "annet"
                     }
                   ]
@@ -280,22 +397,61 @@
                   "id": "reglerKravResult",
                   "type": "Result",
                   "show": { "field": "tekTema", "operator": "eq", "value": "reglerKrav" },
-                  "heading": "Regler/krav for fritidsbolig og enebolig",
-                  "lead": "blabla"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Ser du etter byggtekniske krav for boliger?",
+                      "text": "<p>Direktoratet for byggkvalitet har et pilotprosjekt hvor vi tester ut nye måter å vise fram regelverket på. I piloten svarer du på noen spørsmål om det du skal bygge, og får markert hvilken forskriftstekst og veiledningstekst i byggteknisk forskrift som kan være relevant for det du vil bygge. Dermed trenger du å forholde deg til delene av regelverket som ikke er nødvendig for ditt byggeprosjekt.</p><p>Pilotprosjektet dekker vanlige eneboliger og hytter. Uttrekket du får når du tester, er kun ment for testing, og kan ikke brukes til prosjektering av boliger.</p><p><a href=\"https://dibk.no/boligpilot\" target=\"_blank\">Vil du teste for oss? Klikk her for å prøve regelverkspiloten vår og gi oss din tilbakemelding på denne måten å vise regelverket på.</a></p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "energiOgSkorsteinResult",
                   "type": "Result",
                   "show": { "field": "tekTema", "operator": "eq", "value": "energiOgSkorstein" },
-                  "heading": "Energi og skorstein 🏭",
-                  "lead": "Vær snill"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på noe av dette?",
+                      "text": "<h3>Hvilke energikrav gjelder for bygninger med over 1000 m2 oppvarmet BRA?</h3><p>Bygninger med oppvarmet bruksareal (BRA) større enn 1000 kvadratmeter skal ha energifleksible varmesystemer, og det skal tilrettelegges for lavtemperatur varmeløsninger. Som en preakseptert ytelse er det gitt at energifleksible systemer dekke minimum 60 prosent av normert netto varmebehov, beregnet etter standarden NS 3031:2014. Det er ikke et spesifikt krav til hvilken energikilde som skal benyttes, så lenge bytte av energikilde er en reell mulighet.</p><p>Kravet om å sette av et minimumsareal for byggets varmesentral gjelder uavhengig av hvilken energikilde man velger å benytte. Hensikten med dette er å gi en reell fleksibilitet i byggets livsløp, slik at man i praksis kan bytte energikilde ved en senere anledning.  <a href=\"https://dibk.no/byggereglene/byggteknisk-forskrift-tek17/14/14-4\" target=\"_blank\">Les mer i TEK17 § 14-4 annet ledd.</a></p><h3> Kan bygninger under 1000 m2 oppvarmes kun med elektrisitet?</h3><p>Ja. Det er tillatt med kun elektrisk oppvarming i en bygning med oppvarmet bruksareal (BRA) under 1000 m2. Det er heller ikke krav om et energifleksibelt distribusjonssystem. Dersom bygget er et småhus, er det normalt et krav om skorstein. Definisjonen på småhus er: enebolig, to- til firemannsbolig, rekkehus, kjedehus og terrassehus til og med tre etasjer, jf. NS 3457-3:2013. <a href=\"https://dibk.no/byggereglene/byggteknisk-forskrift-tek17/14/14-4\" target=\"_blank\">Les mer TEK17 § 14-4 fjerde ledd.</a></p><h3>Når er det krav om pipe/skorstein?</h3><p>Krav om skorstein gjelder alle boenheter i småhus (se definisjon over). Det er <u>kun</u> unntak for skorstein hvis:<ul><li>boenheten har vannbåren varme</li><li>årlig netto energibehov til oppvarming ikke overstiger kravet til passivhus, beregnet etter standarden NS 3700:2013 Kriterier for passivhus og lavenergibygninger - Boligbygninger.</li></ul>En stålpipe kan oppfylle kravet, og det forutsettes at pipa står klar for montering av et ildsted. Det er ikke krav om at ildstedet (f.eks. vedovn) er montert.</p><h3>Er det krav om skorstein ved bruk av solceller eller varmepumpe?</h3><p>Det er krav om at boenheten skal ha skorstein uavhengig om det monteres solceller eller luft-til-luft-varmepumpe i bygget. Dersom boenheten oppføres med for eksempel en varmepumpeløsning som er knyttet til et vannbårent varmesystem, og løsningen dekker minimum behov for romoppvarming i stue eller tilsvarende rom, trenger ikke boenheten å ha skorstein.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "romResult",
                   "type": "Result",
                   "show": { "field": "tekTema", "operator": "eq", "value": "rom" },
-                  "heading": "Rom og romstørrelse",
-                  "lead": "Må ha plass og rom, ja"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Er det krav til hvor stort et rom må være?",
+                      "text": "<p>Rom og annet oppholdsareal skal ha utforming, romhøyde og størrelse tilpasset sin funksjon, men det er ingen konkrete krav til størrelse. Tidligere veiledning anbefalte minimum 7 kvadratmeter for rom for varig opphold i bolig, men dette var en anbefaling –  ikke en regel. <a href=\"https://dibk.no/byggereglene/byggteknisk-forskrift-tek17/12/ii/12-7\" target=\"_blank\">Les mer i TEK17 § 12-7</a></p><h3>Hva er rom for varig opphold?”</h3><p>Rom for varig opphold i arbeids- og publikumsbygg er arbeidsrom og publikumsrom. Lagerrom, korridor, gang, garderobe, toalett, dusjrom og lignende er ikke rom for varig opphold.</p><p>Rom for varig opphold i boenhet er stue og tilsvarende rom, kjøkken og soverom</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "type": "Reference",
@@ -305,15 +461,13 @@
                 {
                   "id": "gammeltRegelverkResult",
                   "type": "Result",
-                  "show": { "field": "tekTema", "operator": "eq", "value": "gammeltRegelverk" },
-                  "heading": "Gammelt regelverk?",
-                  "lead": "Se oversikt over tidligere regelverk her"
+                  "show": { "field": "tekTema", "operator": "eq", "value": "gammeltRegelverk" }
                 },
                 {
                   "type": "Reference",
                   "nodeId": "proffAnnetResult",
                   "show": { "field": "tekTema", "operator": "eq", "value": "annet" }
-                }
+                 }
               ]
             },
             {
@@ -326,34 +480,40 @@
                   "heading": "Hva trenger du hjelp til?",
                   "options": [
                     {
-                      "id": "privatHvaTrengerDu.sokeOgVarsle",
-                      "type": "Answer",
-                      "heading": "Byggesøknad og nabovarsel",
-                      "value": "sokeOgVarsle"
-                    },
-                    {
                       "id": "privatHvaTrengerDu.omJegMåSøke",
                       "type": "Answer",
                       "heading": "Finne ut om jeg må søke",
                       "value": "omJegMåSøke"
                     },
                     {
+                      "id": "privatHvaTrengerDu.sokeOgVarsle",
+                      "type": "Answer",
+                      "heading": "Søke og nabovarsle",
+                      "value": "sokeOgVarsle"
+                    },
+                    {
                       "id": "privatHvaTrengerDu.kommunalePlaner",
                       "type": "Answer",
-                      "heading": "Spørsmål om kommunale planer",
+                      "heading": "Reguleringsplan eller andre kommunale planer",
                       "value": "kommunalePlaner"
+                    },
+                    {
+                      "id": "privatHvaTrengerDu.feilMangel",
+                      "type": "Answer",
+                      "heading": "Finne ut om en bygning har feil eller mangler",
+                      "value": "feilMangel"
+                    },
+                    {
+                      "id": "privatHvaTrengerDu.byggeboligpriv",
+                      "type": "Answer",
+                      "heading": "Bygge enebolig eller fritidsbolig",
+                      "value": "byggeboligpriv"
                     },
                     {
                       "id": "privatHvaTrengerDu.uenigIVedtak",
                       "type": "Answer",
                       "heading": "Uenig i et vedtak fra kommunen",
                       "value": "uenigIVedtak"
-                    },
-                    {
-                      "id": "privatHvaTrengerDu.feilMangel",
-                      "type": "Answer",
-                      "heading": "Finne ut om boligen min har feil eller mangler",
-                      "value": "feilMangel"
                     }
                   ]
                 },
@@ -361,8 +521,21 @@
                   "id": "sokeOgVarsleResult",
                   "type": "Result",
                   "show": { "field": "privatHvaTrengerDu", "operator": "eq", "value": "sokeOgVarsle" },
-                  "heading": "Byggesøknad og nabovarsel",
-                  "lead": "Åtte steg og enklere byggesøknad temaside nabovarsel"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på noe av dette?",
+                      "text": "<p><ul><li><a href=\"https://dibk.no/bygge-selv/soknadsskjema-for-mindre-byggeprosjekter-pa-boligeiendom\" target=\"_blank\">Enklere søknadsskjemaer for å nabovarsle og sende inn byggesøknad </a></li><li><a href=\"http://dibk.no\" target=\"_blank\">“Åtte steg fra idé til ferdig søknad” veileder deg gjennom de ulike stegene av søknadsprosessen</a></li><li><a href=\"http://dibk.no\" target=\"_blank\">Alt om nabovarsling</a></li><li><a href=\"http://dibk.no\" target=\"_blank\">Verktøy og veivisere for deg som skal bygge noe</a></li></ul></p><h3>Får du ikke svar i vår veiledning eller ved å lese regelverket?</h3><p>Da må du kontakte kommunen din. Det er kommunen som avgjør om det du vil gjøre er søknadspliktig. Det er også de som skal behandle byggesøknaden din.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "type": "Reference",
@@ -394,16 +567,16 @@
                           "heading": "Hvilket regelverk gjelder for bygningen?",
                           "options": [
                             {
-                              "id": "hvilketRegelverk.eldreRegelverk",
-                              "type": "Answer",
-                              "heading": "Eldre regelverk",
-                              "value": "eldreRegelverk"
-                            },
-                            {
                               "id": "hvilketRegelverk.tek10eller17",
                               "type": "Answer",
                               "heading": "TEK10 eller TEK17",
                               "value": "tek10eller17"
+                            },
+                            {
+                              "id": "hvilketRegelverk.eldreRegelverk",
+                              "type": "Answer",
+                              "heading": "Eldre regelverk",
+                              "value": "eldreRegelverk"
                             },
                             {
                               "id": "hvilketRegelverk.vetIkke",
@@ -417,23 +590,83 @@
                           "id": "eldreRegelverkResult",
                           "type": "Result",
                           "show": { "field": "hvilketRegelverk", "operator": "eq", "value": "eldreRegelverk" },
-                          "heading": "Malsvar eldreRegelverk"
+                          "heading": "Kontakt oss",
+                          "children": [
+                            {
+                              "id": "infoText",
+                              "type": "Group",
+                              "text": "<h3>Lurer du på hvilke rettigheter du har som boligkjøper?</h3><p>Du kan finne informasjon om dine rettigheter som boligkjøper på <a href=\"https://www.forbrukerradet.no/forside/bolig/kjop-og-salg-av-bolig\" target=\"_blank\">Forbrukerrådets nettsider.</a></p><h3>Lurer du på om en bygning har feil eller mangler?</h3><p>Vi kan ikke vurdere om en bygning har feil eller mangler. Trenger du hjelp til å vurdere om du har mangel eller skade, anbefaler vi å kontakte en takstmann eller annen nøytral fagperson som kan vurdere bygningens tilstand. Hvilke byggeregler som gjaldt da bygningen ble satt opp, kan være en del av vurderingen takstmannen gjør.</p><p>Hvis du skal reklamere på noe i bygningen din, er det ofte viktigst å finne ut om det er mangler som selger burde opplyst om, eller om tilstanden er vesentlig dårligere enn det du kunne vente ut fra avtalen.  <a href=\"https://www.forbrukerradet.no/forside/bolig\" target=\"_blank\">Les mer på Forbrukerrådets nettsider.</a></p><h3>Vil du vite hvilke byggeregler som gjelder i ditt tilfelle?</h3><p>Det er ofte bedre å bruke en takstmann eller en annen fagperson enn selv å vurdere skader og mangler opp mot gammelt regelverk. Hvis du likevel ønsker å sette deg inn i hvilke regler som har vært gjeldende for ulike arbeider for bygningen din, må du vite når bygningen er oppført og når det er gjort søknadspliktige endringer. En bygning kan være bygd etter mange ulike sett med byggeregler, alt etter når det er gjort endringer. Det er ikke noen plikt til å oppgradere bygninger når byggereglene endres.  Du kan be kommunen din om gratis innsyn i alle byggesaker på eiendommen din. Da kan du få oversikt over når det er søkt om oppføring og endring av bygningen. Det er søknadsdatoen som avgjør hvilket regelverk som brukes.</p><p>Vi kan dessverre ikke veilede i eldre regelverk. Trenger du hjelp til å finne ut hvordan gamle regler ble brukt, anbefaler vi at du tar kontakt med erfarne fagpersoner, for eksempel en takstmann eller en byggmester. <a href=\"https://www.regjeringen.no/no/tema/plan-bygg-og-eiendom/bygningsregelverket-fra-1965--20172/id2590706\" target=\"_blank\">Her finner du oversikt over historisk regelverk.</a></p><h3>Hva kan kommunen gjøre?</h3><p>Hvis du mistenker at noe er bygget ulovlig, kan du varsle kommunen. Kommunen kan føre tilsyn mens det bygges eller når ferdigattesten for byggearbeidene er mindre enn fem år gammel. I et tilsyn kan kommunen ta stilling til om tekniske krav er fulgt. Kommunen bestemmer selv hvilke saker de vil føre tilsyn med.</p>"
+                            },
+                            {
+                               "id": "infoKontaktOss",
+                               "type": "Group",
+                               "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                               "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                }
+                              ]
                         },
                         {
-                          "id": "tek10eller17Result",
+                          "id": "tekResult",
                           "type": "Result",
                           "show": { "field": "hvilketRegelverk", "operator": "eq", "value": "tek10eller17" },
-                          "heading": "Malsvar tek10eller17"
+                          "heading": "Kontakt oss",
+                          "children": [
+                            {
+                              "id": "infoText",
+                              "type": "Group",
+                              "heading": "Her kan du lese om ting som er viktige",
+                              "text": "<h3>Lurer du på hvilke rettigheter du har som boligkjøper?</h3><p>Du kan finne informasjon om dine rettigheter som boligkjøper på <a href=\"https://www.forbrukerradet.no/forside/bolig/kjop-og-salg-av-bolig\" target=\"_blank\">Forbrukerrådets nettsider.</a></p><h3>Lurer du på om en bygning har feil eller mangler?</h3><p>Vi kan ikke vurdere om en bygning har feil eller  mangler. For å finne ut dette bør du først snakke med de som har vært ansvarlig for oppføringen av bygningen. Ansvarlig prosjekterende er de som har planlagt og tegnet bygningen. Ansvarlig prosjekterende kan si noe om hvilket regelverk bygningen er bygget etter, hvilke løsninger som ble valgt og hvordan løsningene oppfyller kravene i regelverket. Hvis det som er planlagt av ansvarlig prosjekterende og det som er bygget ikke er det samme, er det ansvarlig utførende som må forklare hva de har gjort. Ansvarlig utførende er de som har satt opp bygningen.</p><p>Hvis du ikke vet hvem som er ansvarlig prosjekterende og utførende, kan du finne ut dette ved å spørre de som solgte deg boligen eller ved å undersøke byggesaken hos kommunen. Hvis du ikke kommer i kontakt med de ansvarlige eller de ikke vil hjelpe deg, anbefaler vi at du får hjelp av en uavhengig fagperson til å vurdere bygningen. Du kan for eksempel bruke en byggmester eller en takstmann.</p><h3>Mistenker du at det er bygget ulovlig?</h3><p>Hvis du mistenker at det er bygget ulovlig, kan du varsle kommunen. Kommunen kan føre tilsyn mens det bygges eller når ferdigattesten for byggearbeidene er mindre enn fem år gammel. I et tilsyn kan kommunen ta stilling til om tekniske krav er fulgt. Kommunen bestemmer selv hvilke saker de vil føre tilsyn med.</p><h3>Kan du bo i en bolig som har mangler?</h3><p>Du kan bo i boligen så lenge det er gitt ferdigattest eller midlertidig brukstillatelse. Kommunen kan ved et tilsyn finne ut at ferdigattesten eller den midlertidige brukstillatelsen er gitt på feil grunnlag, og trekke den tilbake. Dette må kommunen gjøre som et eget vedtak, som du kan klage på om du ikke er enig i det.</p>"
+                            },
+                            {
+                               "id": "infoKontaktOss",
+                               "type": "Group",
+                               "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                               "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                }
+                              ]
                         },
                         {
                           "id": "vetIkkeResult",
                           "type": "Result",
                           "show": { "field": "hvilketRegelverk", "operator": "eq", "value": "vetIkke" },
-                          "heading": "Malsvar vetIkke"
+                          "heading": "Kontakt oss",
+                          "children": [
+                            {
+                              "id": "infoText",
+                              "type": "Group",
+                              "text": "<h3>Lurer du på hvilke rettigheter du har som boligkjøper?</h3><p>Du kan finne informasjon om dine rettigheter som boligkjøper på <a href=\"https://www.forbrukerradet.no/forside/bolig/kjop-og-salg-av-bolig\" target=\"_blank\">Forbrukerrådets nettsider.</a></p><h3>Lurer du på om en bygning har feil eller mangler?</h3><p>Vi kan ikke vurdere om en bygning har feil eller mangler. Trenger du hjelp til å vurdere om du har mangel eller skade, anbefaler vi å kontakte en takstmann eller annen nøytral fagperson som kan vurdere bygningens tilstand. Hvilke byggeregler som gjaldt da bygningen ble satt opp, kan være en del av vurderingen takstmannen gjør.</p><p>Hvis du skal reklamere på noe i bygningen din, er det ofte viktigst å finne ut om det er mangler som selger burde opplyst om, eller om tilstanden er vesentlig dårligere enn det du kunne vente ut fra avtalen.  <a href=\"https://www.forbrukerradet.no/forside/bolig\" target=\"_blank\">Les mer på Forbrukerrådets nettsider.</a></p><h3>Vil du vite hvilke byggeregler som gjelder i ditt tilfelle?</h3><p>Det er ofte bedre å bruke en takstmann eller en annen fagperson enn selv å vurdere skader og mangler opp mot gammelt regelverk. Hvis du likevel ønsker å sette deg inn i hvilke regler som har vært gjeldende for ulike arbeider for bygningen din, må du vite når bygningen er oppført og når det er gjort søknadspliktige endringer. En bygning kan være bygd etter mange ulike sett med byggeregler, alt etter når det er gjort endringer. Det er ikke noen plikt til å oppgradere bygninger når byggereglene endres.  Du kan be kommunen din om gratis innsyn i alle byggesaker på eiendommen din. Da kan du få oversikt over når det er søkt om oppføring og endring av bygningen. Det er søknadsdatoen som avgjør hvilket regelverk som brukes.</p><p>Vi kan dessverre ikke veilede i eldre regelverk. Trenger du hjelp til å finne ut hvordan gamle regler ble brukt, anbefaler vi at du tar kontakt med erfarne fagpersoner, for eksempel en takstmann eller en byggmester. <a href=\"https://www.regjeringen.no/no/tema/plan-bygg-og-eiendom/bygningsregelverket-fra-1965--20172/id2590706\" target=\"_blank\">Her finner du oversikt over historisk regelverk.</a></p><h3>Hva kan kommunen gjøre?</h3><p>Hvis du mistenker at noe er bygget ulovlig, kan du varsle kommunen. Kommunen kan føre tilsyn mens det bygges eller når ferdigattesten for byggearbeidene er mindre enn fem år gammel. I et tilsyn kan kommunen ta stilling til om tekniske krav er fulgt. Kommunen bestemmer selv hvilke saker de vil føre tilsyn med.</p> "
+                            },
+                            {
+                               "id": "infoKontaktOss",
+                               "type": "Group",
+                               "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                               "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                }
+                              ]
                         }
                       ]
                     }
                   ]
+                },
+                {
+                  "id": "byggeboligprivResult",
+                  "type": "Result",
+                  "show": { "field": "privatHvaTrengerDu", "operator": "eq", "value": "byggeboligpriv" },
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Skal du bygge enebolig eller fritidsbolig?",
+                      "text": "<p><p>Det er søknadsplikt å bygge enebolig eller fritidsbolig. Du må enten bruke ansvarlige foretak i hele byggeprosessen eller søke om å være selvbygger. Skal du være selvbygger, må du i søknaden om byggetillatelse sannsynliggjøre at arbeidene vil bli utført i samsvar med plan- og bygningsloven, byggesaksforskriften, byggteknisk forskrift og gjeldende planer for byggeområdet.</p><p>Alle nye boliger må følge byggteknisk forskrift (TEK17). Du kan <a href=\"https://dibk.no/boligpilot\" target=\"_blank\">Lenketekstteste ut vår boligveiviser</a> for å få mer informasjon om hvilke regler i TEK17 som kan være relevante for det du skal bygge. Du vil da få opp en markering av all forskriftstekst og veiledningstekst som kan være relevant.</p><h3>Når er det krav om pipe/skorstein?</h3><p>Krav om skorstein gjelder <u>alle</u> boenheter i småhus, og gjelder både for fritidsboliger og helårsboliger. Det er <u>kun</u> unntak for skorstein hvis:<ul><li>boenheten har vannbåren varme</li><li>årlig netto energibehov til oppvarming ikke overstiger kravet til passivhus, beregnet etter standarden NS 3700:2013 Kriterier for passivhus og lavenergibygninger - Boligbygninger.</li></ul>En stålpipe kan oppfylle kravet, og det forutsettes at pipa står klar for montering av et ildsted. Det er ikke krav om at ildstedet (f.eks. vedovn) er montert.</p><h3>Er det krav om skorstein ved bruk av solceller eller varmepumpe?</h3><p>Det er krav om at boenheter skal ha skorstein uavhengig om det monteres solceller eller luft-til-luft-varmepumpe i bygget. Dersom boenheten oppføres med for eksempel en varmepumpeløsning som er knyttet til et vannbårent varmesystem, og løsningen dekker minimum behov for romoppvarming i stue eller tilsvarende rom, trenger ikke boenheten å ha skorstein.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "hvaSkalDuGjøre",
@@ -443,15 +676,9 @@
                   "heading": "Hva skal du gjøre?",
                   "options": [
                     {
-                      "id": "hvaSkalDuGjøre.endreAvkjørsel",
-                      "type": "Answer",
-                      "heading": "Endre avkjørsel",
-                      "value": "endreAvkjørsel"
-                    },
-                    {
                       "id": "hvaSkalDuGjøre.frittliggende",
                       "type": "Answer",
-                      "heading": "Bygge garasje, bod, drivhus, anneks, veksted, kontor, atelier, eller annen frittliggende bygning",
+                      "heading": "Bygge garasje, bod, drivhus, anneks, verksted, kontor, atelier, eller annen frittliggende bygning",
                       "value": "frittliggende"
                     },
                     {
@@ -475,8 +702,14 @@
                     {
                       "id": "hvaSkalDuGjøre.annet",
                       "type": "Answer",
-                      "heading": "Jeg lurer på noe annet",
+                      "heading": "Noe annet",
                       "value": "annet"
+                    },
+                    {
+                      "id": "hvaSkalDuGjøre.endreAvkjørsel",
+                      "type": "Answer",
+                      "heading": "Lage vei, avkjørsel eller biloppstilllngsplass",
+                      "value": "endreAvkjørsel"
                     }
                   ]
                 },
@@ -484,37 +717,115 @@
                   "id": "endreAvkjørselResult",
                   "type": "Result",
                   "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "endreAvkjørsel" },
-                  "heading": "endreAvkjørsel resultat"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Her kan du lese om ting som er viktige",
+                      "text": "<h3>Hva slags veier er unntatt søknadsplikt?</h3><p>Interne veier og biloppstillingsplasser som er minimum 1,0 meter fra nabogrensen er unntatt søknadsplikt. Dette forutsetter at veien eller biloppstillingsplassen er til eiendommens bruk.</p><p>Med intern vei menes adkomstvei eller vei mellom forskjellige byggverk på eiendommen. For landsbrukseiendommer er oppstillingsplasser for landbruksmaskiner til bruk på eiendommen også unntatt søknadsplikt.</p><h3>Trenger du ny eller endret avkjørsel?</h3><p>Det er søknadspliktig å endre en avkjørsel mot vei. Trenger du ny eller endret avkjørsel mot kommunal vei, kontakter du kommunen din. Trenger du ny eller endret avkjørsel mot riks- eller fylkesvei, kan du bruke <a href=\"https://www.vegvesen.no/trafikkinformasjon/langs-veien/soknad-om-avkjorsel/send-inn-soknad-om-avkjorsel\" target=\"_blank\">Statens Vegvesens digitale søknadsløsning.</a></p><h3>Får du ikke svar i vår veiledning eller ved å lese regelverket?</h3><p>Da må du kontakte kommunen din. Det er kommunen som avgjør om det du vil gjøre er søknadspliktig. Det er også kommunen som skal behandle byggesøknaden din.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "frittliggendeResult",
                   "type": "Result",
                   "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "frittliggende" },
-                  "heading": "frittliggende resultat"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på om det du vil bygge er søknadspliktig?",
+                      "text": "<p>Du kan prøve vår veiviser <a href=\"https://dibk.no/garasje\" target=\"_blank\">“Bygg uten å søke”</a> for å finne ut om det du vil gjøre er søknadspliktig.</p><p>Du kan også sjekke vår temaside  <a href=\"https://dibk.no/bygge-selv/dette-kan-du-bygge-uten-a-soke\" target=\"_blank\">“Dette kan du bygge selv uten å søke” eller lese mer i <a href=\"https://dibk.no/byggeregler/sak/2/4/4-1\" target=\"_blank\">byggesaksforskriften § 4-1.</a></p><h3>Får du ikke svar i vår veiledning eller ved å lese regelverket?</h3><p>Da må du kontakte kommunen din. Det er kommunen som avgjør om det du vil gjøre er søknadspliktig. Det er også kommunen som skal behandle byggesøknaden din.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "tilbyggResult",
                   "type": "Result",
                   "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "tilbygg" },
-                  "heading": "tilbygg resultat"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på om det du vil bygge er søknadspliktig?",
+                      "text": "<p>Du kan prøve vår <a href=\"https://dibk.no/tilbygg\" target=\"_blank\">“veiviser for terrasser, plattinger, verandaer og tilbygg”</a> for å finne ut om det du vil gjøre er søknadspliktig.</p><p>Du kan også sjekke vår temaside <a href=\"https://dibk.no/bygge-selv/dette-kan-du-bygge-uten-a-soke\" target=\"_blank\">“Dette kan du bygge selv uten å søke” eller lese mer i <a href=\"https://dibk.no/byggeregler/sak/2/4/4-1\" target=\"_blank\">byggesaksforskriften § 4-1.</a></p><h3>Får du ikke svar i vår veiledning eller ved å lese regelverket?</h3><p>Da må du kontakte kommunen din. Det er kommunen som avgjør om det du vil gjøre er søknadspliktig. Det er også kommunen som skal behandle byggesøknaden din.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "bruksendringResult",
                   "type": "Result",
                   "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "bruksendring" },
-                  "heading": "bruksendring resultat"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på noe av dette?",
+                      "text": "<p>Skal du endre bruken av et rom, altså bruksendre? <a href=\"https://dibk.no/bruksendring\" target=\"_blank\">Prøv vår veiviser for bruksendring for å se om den dekker endringen du vil gjøre.</a> </p><p>Hvis det du vil gjøre ikke dekkes av veiviseren, kan du lese mer her:<ul><li><a href=\"https://dibk.no/bygge-selv/bruksendring-i-boliger---sporsmal-og-svar\" target=\"_blank\">Hva er en bruksendring?</a></li><a href=\"https://dibk.no/om-oss/Nyhetsarkiv/nye-byggeregler-for-bruksendring-i-eldre-boliger\" target=\"_blank\">Bruksendring i eldre boliger </a><li><a href=\"https://dibk.no/byggeregler/sak/2/2/2-1\" target=\"_blank\">Byggesaksforskriften § 2-1 c) om varig og tidsbestemt bruksendring</a></li></ul><h3> Får du ikke svar i vår veiledning eller ved å lese regelverket?</h3><p>Da må du kontakte kommunen din. Det er kommunen som avgjør om det du vil gjøre er søknadspliktig. </p> </p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "byggeResult",
                   "type": "Result",
                   "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "bygge" },
-                  "heading": "bygge resultat"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Skal du bygge enebolig eller fritidsbolig?",
+                      "text": "<p>Det er søknadsplikt å bygge enebolig eller fritidsbolig. Du må enten bruke ansvarlige foretak i hele byggeprosessen eller søke om å være selvbygger. Skal du være selvbygger, må du i søknaden om byggetillatelse sannsynliggjøre at arbeidene vil bli utført i samsvar med plan- og bygningsloven, byggesaksforskriften, byggteknisk forskrift og gjeldende planer for byggeområdet.</p><p>Alle nye boliger må følge byggteknisk forskrift (TEK17). Du kan <a href=\"https://dibk.no/boligpilot\" target=\"_blank\">Lenketekstteste ut vår boligveiviser</a> for å få mer informasjon om hvilke regler i TEK17 som kan være relevante for det du skal bygge. Du vil da få opp en markering av all forskriftstekst og veiledningstekst som kan være relevant.</p><h3>Når er det krav om pipe/skorstein?</h3><p>Krav om skorstein gjelder <u>alle</u> boenheter i småhus, og gjelder både for fritidsboliger og helårsboliger. Det er <u>kun</u> unntak for skorstein hvis:<ul><li>boenheten har vannbåren varme</li><li>årlig netto energibehov til oppvarming ikke overstiger kravet til passivhus, beregnet etter standarden NS 3700:2013 Kriterier for passivhus og lavenergibygninger - Boligbygninger.</li></ul>En stålpipe kan oppfylle kravet, og det forutsettes at pipa står klar for montering av et ildsted. Det er ikke krav om at ildstedet (f.eks. vedovn) er montert.</p><h3>Er det krav om skorstein ved bruk av solceller eller varmepumpe?</h3><p>Det er krav om at boenheter skal ha skorstein uavhengig om det monteres solceller eller luft-til-luft-varmepumpe i bygget. Dersom boenheten oppføres med for eksempel en varmepumpeløsning som er knyttet til et vannbårent varmesystem, og løsningen dekker minimum behov for romoppvarming i stue eller tilsvarende rom, trenger ikke boenheten å ha skorstein.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "annetResult",
                   "type": "Result",
                   "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "annet" },
-                  "heading": "annet resultat"
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 }
               ]
             },
@@ -530,19 +841,19 @@
                     {
                       "id": "saksbehandlerHvaTrengerDu.utnytting",
                       "type": "Answer",
-                      "heading": "Utnytting",
+                      "heading": "Grad av utnytting",
                       "value": "utnytting"
                     },
                     {
                       "id": "saksbehandlerHvaTrengerDu.planer",
                       "type": "Answer",
-                      "heading": "Planer",
+                      "heading": "Reguleringsplaner eller andre kommunale planer",
                       "value": "planer"
                     },
                     {
                       "id": "saksbehandlerHvaTrengerDu.tilsyn",
                       "type": "Answer",
-                      "heading": "Tilsyn",
+                      "heading": "Kommunalt tilsyn",
                       "value": "tilsyn"
                     },
                     {
@@ -560,7 +871,7 @@
                     {
                       "id": "saksbehandlerHvaTrengerDu.annet",
                       "type": "Answer",
-                      "heading": "Jeg lurer på noe annet",
+                      "heading": "Noe annet",
                       "value": "annet"
                     }
                   ]
@@ -569,43 +880,127 @@
                   "id": "saksbehandlerUtnyttingResult",
                   "type": "Result",
                   "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "utnytting" },
-                  "heading": "utnytting resultatside",
-                  "text": "Om grad av utnytting"
+                  "heading": "Kontakt oss",
+                  "text": "Om grad av utnytting",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på noe av dette?",
+                      "text": "<h3>Hvor finner jeg ny veiledning om grad av utnytting?</h3><p>Veiledningen til kapittel 5 og 6 i byggteknisk forskrift kom i juni 2019 i en oppusset og mer klarspråklig versjon. Det er også laget nye illustrasjoner som forklarer regelverket på en mer tydelig måte. <a href=\"https://dibk.no/om-oss/Nyhetsarkiv/redigert-veiledning-til-grad-av-utnytting\" target=\"_blank\">Les mer her.</a></p><h3>Gjelder det tolkning av grad av utnytting i en konkret plan?</h3><p>Vi kan ikke svare på hvordan grad av utnytting skal tolkes i en konkret reguleringsplan eller byggesak. Dette må kommunen selv gjøre. Det er viktig at planene blir tolket likt hver gang for å sikre likebehandling. Er dere usikre på hvordan en plan skal tolkes, bør dere kontakte de i kommunen som har ansvar for kommunal planlegging.</p><h3>Trenger dere veiledningsmateriell om grad av utnytting for privatpersoner?</h3><p>Veiviseren <a href=\"https://dibk.no/hvorstortkandubygge\" target=\"_blank\">”Hvor stort kan du bygge?”</a> er laget for å hjelpe privatpersoner og andre med å finne tillatt grad av utnytting på egen eiendom.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "saksbehandlerPlanerResult",
                   "type": "Result",
                   "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "planer" },
-                  "heading": "planer resultatside",
-                  "text": "Om planer"
+                  "heading": "Kontakt oss",
+                   "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Ser du etter veiledning om planer og planlegging?",
+                      "text": "<p>Planavdelingen i Kommunal- og moderniseringsdepartementet er øverste myndighet for reguleringsplaner. De har blant annet veiledere om reguleringsplaner, konsekvensutredninger og kommunal behandling av små vindkraftanlegg. <a href=\"https://www.regjeringen.no/no/tema/plan-bygg-og-eiendom/plan--og-bygningsloven/plan/veiledning-om-planlegging/pblveiledere/id2009055\" target=\"_blank\">Les mer her. </a></p><h3>Har du spørsmål om tolkning av en konkret plan?</h3><p>Vi kan ikke svare på hvordan en konkret reguleringsplan eller byggesak skal tolkes eller vurdere om det kan gis dispensasjon fra en plan. Dette må kommunen selv gjøre. Det er viktig at planene blir tolket likt hver gang for å sikre likebehandling. Er dere usikre på hvordan en plan skal tolkes, bør dere kontakte de i kommunen som har ansvar for kommunal planlegging.</p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "saksbehandlerTilsynResult",
                   "type": "Result",
                   "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "tilsyn" },
-                  "heading": "tilsyn resultatside",
-                  "text": "Om tilsyn"
+                  "heading": "Kontakt oss",
+                  "text": "Om tilsyn",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på noe av dette?",
+                      "text": "<p><ul><li><a href=\"https://dibk.no/saksbehandling/kommunalt-tilsyn/temaveiledninger/veiledning-for-kommunalt-tilsyn-med-produktdokumentasjon\" target=\"_blank\">Temaveileder: Kommunalt tilsyn med produktdokumentasjon</a></li><li><a href=\"https://dibk.no/verktoy-og-veivisere/produktdokumentasjon-kommuner\" target=\"_blank\">Digital sjekkliste for kommuner som skal føre tilsyn med produktdokumentasjon</a></li><li><a href=\"https://dibk.no/saksbehandling/kommunalt-tilsyn/temaveiledninger/tilsyn-med-kvalifikasjoner-i-foretak\" target=\"_blank\">Temaveileder: Tilsyn med kvalifikasjoner i foretak </a></li><li><a href=\"https://dibk.no/saksbehandling/kommunalt-tilsyn\" target=\"_blank\">Annet innhold om kommunalt tilsyn </a></li></ul></p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "saksbehandlerSaksbehandlingResult",
                   "type": "Result",
                   "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "saksbehandling" },
-                  "heading": "saksbehandling resultatside",
-                  "text": "Om saksbehandling"
+                  "heading": "Kontakt oss",
+                  "text": "Om saksbehandling",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på noe av dette?",
+                      "text": "<p><ul><li><a href=\"https://dibk.no/saksbehandling/byggesaksbehandling-i-praksis\" target=\"_blank\">Temaside: Byggesaksbehandling i praksis</a></li><li><a href=\"https://www.regjeringen.no/no/dokument/lover_regler/tolkningsuttalelser/plan--og-bygningsrett/id600032\" target=\"_blank\">Tolkningsuttalelser fra Kommunal- og moderniseringsdepartementet </a></li><li><a href=\"https://dibk.no/saksbehandling/kommunalt-tilsyn/temaveiledninger/temaveileder-uavhengig-kontroll\" target=\"_blank\">Temaveileder - uavhengig kontroll </a></li><li><a href=\"https://dibk.no/saksbehandling/kommunalt-tilsyn/temaveiledninger/utbygging-i-fareomrade-nynorsk\" target=\"_blank\">Temaveileder - utbygging i fareområde </a></li><li><a href=\"https://dibk.no/saksbehandling/byggesaksbehandling-i-praksis/nye-nasjonale-sjekklister-for-byggesak\" target=\"_blank\">Nasjonale sjekklister for byggesak </a></li><li><a href=\"https://dibk.no/verktoy-og-veivisere/andre-fagomrader/fellestjenester-bygg\" target=\"_blank\">Fellestjenester BYGG  </a></li><li><a href=\"https://dibk.no/bygge-selv\" target=\"_blank\">“Bygge selv” - temaside med veiledning for privatpersoner</a></li></ul></p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
+                },
+                {
+                  "id": "saksbehandlerSoknadspliktResult",
+                  "type": "Result",
+                  "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "søknadsplikt" },
+                  "heading": "Kontakt oss",
+                  "text": "Om søknadsplikt",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på noe av dette?",
+                      "text": "<p><ul><li><a href=\"https://dibk.no/saksbehandling/byggesaksbehandling-i-praksis/Soknadsplikt\" target=\"_blank\">Artikkel om hvordan vurdere om noe er søknadspliktig</a></li>                      <li><a href=\"https://dibk.no/saksbehandling/byggesaksbehandling-i-praksis\" target=\"_blank\">Temaside: Byggesaksbehandling i praksis</a></li><li><a href=\"https://www.regjeringen.no/no/dokument/lover_regler/tolkningsuttalelser/plan--og-bygningsrett/id600032\" target=\"_blank\">Tolkningsuttalelser fra Kommunal- og moderniseringsdepartementet </a></li><li><a href=\"https://dibk.no/bygge-selv\" target=\"_blank\">“Bygge selv” - temaside med veiledning for privatpersoner</a></li><li><a href=\"https://lovdata.no/dokument/NL/lov/2008-06-27-71/KAPITTEL_4-1#KAPITTEL_4-1\" target=\"_blank\">Kapittel 20 i plan- og bygningsloven om søknadsplikt</a></li><li><a href=\"https://dibk.no/byggeregler/sak/2/4/innledning\" target=\"_blank\">Kapittel 4 i byggesaksforskriften om hvilke tiltak som er unntak søknadsplikt</a></li></ul></p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "saksbehandlerAnnetResult",
                   "type": "Result",
                   "show": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "annet" },
-                  "heading": "annet resultatside",
-                  "text": "Om annet"
+                  "heading": "Kontakt oss",
+                  "text": "Om annet",
+                  "children": [
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                        }
+                      ]
                 },
                 {
                   "id": "saksbehandlerSøknadspliktBranch",
                   "type": "Branch",
                   "branches": [
                     {
-                      "test": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "søknadsplikt" },
+                      "test": { "field": "saksbehandlerHvaTrengerDu", "operator": "eq", "value": "her_skal_det_stå_søknadsplikt_etter_kvalitetssikring" },
                       "children": [
                         {
                           "id": "byggesaksbehandler",
@@ -632,7 +1027,21 @@
                           "type": "Result",
                           "show": { "field": "byggesaksbehandler", "operator": "eq", "value": false },
                           "heading": "Skal du vurdere om noe er søknadspliktig?",
-                          "lead": "Masse masse tekst"
+                          "lead": "Masse masse tekst",
+                          "children": [
+                            {
+                              "id": "infoText",
+                              "type": "Group",
+                              "heading": "Her kan du lese om ting som er viktige",
+                              "text": "<p>Tekst</p>"
+                            },
+                            {
+                               "id": "infoKontaktOss",
+                               "type": "Group",
+                               "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                               "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                }
+                              ]
                         },
                         {
                           "id": "pbl201",
@@ -666,7 +1075,21 @@
                           "type": "Result",
                           "show": { "field": "pbl201", "operator": "eq", "value": "vetIkke" },
                           "heading": "Vi kan ikke vurdere for deg",
-                          "lead": "lang tekst her"
+                          "lead": "lang tekst her",
+                          "children": [
+                            {
+                              "id": "infoText",
+                              "type": "Group",
+                              "heading": "Her kan du lese om ting som er viktige",
+                              "text": "<p>Tekst</p>"
+                            },
+                            {
+                               "id": "infoKontaktOss",
+                               "type": "Group",
+                               "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                               "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                }
+                              ]
                         },
                         {
                           "id": "pbl201Branch",
@@ -706,13 +1129,41 @@
                                   "id": "unntakFraSøknadspliktNeiResult",
                                   "type": "Result",
                                   "show": { "field": "unntakFraSøknadsplikt", "operator": "eq", "value": "nei" },
-                                  "heading": "Det er søknadspliktig"
+                                  "heading": "Det er søknadspliktig",
+                                  "children": [
+                                    {
+                                      "id": "infoText",
+                                      "type": "Group",
+                                      "heading": "Her kan du lese om ting som er viktige",
+                                      "text": "<p>Tekst</p>"
+                                    },
+                                    {
+                                       "id": "infoKontaktOss",
+                                       "type": "Group",
+                                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                        }
+                                      ]
                                 },
                                 {
                                   "id": "unntakFraSøknadspliktUsikkerResult",
                                   "type": "Result",
                                   "show": { "field": "unntakFraSøknadsplikt", "operator": "eq", "value": "usikker" },
-                                  "heading": "Andre regler. Kontakt ansvarlig myndighet"
+                                  "heading": "Andre regler. Kontakt ansvarlig myndighet",
+                                  "children": [
+                                    {
+                                      "id": "infoText",
+                                      "type": "Group",
+                                      "heading": "Her kan du lese om ting som er viktige",
+                                      "text": "<p>Tekst</p>"
+                                    },
+                                    {
+                                       "id": "infoKontaktOss",
+                                       "type": "Group",
+                                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                        }
+                                      ]
                                 },
                                 {
                                   "id": "vilkårUnntakOppfylt",
@@ -746,13 +1197,41 @@
                                   "type": "Result",
                                   "show": { "field": "vilkårUnntakOppfylt", "operator": "eq", "value": "ja" },
                                   "heading": "Det er ikke søknadspliktig",
-                                  "lead": "...forutsatt samsvar med plan"
+                                  "lead": "...forutsatt samsvar med plan",
+                                  "children": [
+                                    {
+                                      "id": "infoText",
+                                      "type": "Group",
+                                      "heading": "Her kan du lese om ting som er viktige",
+                                      "text": "<p>Tekst</p>"
+                                    },
+                                    {
+                                       "id": "infoKontaktOss",
+                                       "type": "Group",
+                                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                        }
+                                      ]
                                 },
                                 {
                                   "id": "vilkårUnntakOppfyltNeiResult",
                                   "type": "Result",
                                   "show": { "field": "vilkårUnntakOppfylt", "operator": "eq", "value": "nei" },
-                                  "heading": "Det er søknadspliktig"
+                                  "heading": "Det er søknadspliktig",
+                                  "children": [
+                                    {
+                                      "id": "infoText",
+                                      "type": "Group",
+                                      "heading": "Her kan du lese om ting som er viktige",
+                                      "text": "<p>Tekst</p>"
+                                    },
+                                    {
+                                       "id": "infoKontaktOss",
+                                       "type": "Group",
+                                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                        }
+                                      ]
                                 },
                                 {
                                   "type": "Reference",
@@ -794,18 +1273,60 @@
                                   "id": "iStridMedPlanVetIkkeResult",
                                   "type": "Result",
                                   "show": { "field": "iStridMedPlan", "operator": "eq", "value": "vetIkke" },
-                                  "heading": "vet ikke"
+                                  "heading": "vet ikke",
+                                  "children": [
+                                    {
+                                      "id": "infoText",
+                                      "type": "Group",
+                                      "heading": "Her kan du lese om ting som er viktige",
+                                      "text": "<p>Tekst</p>"
+                                    },
+                                    {
+                                       "id": "infoKontaktOss",
+                                       "type": "Group",
+                                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                        }
+                                      ]
                                 },
                                 {
                                   "id": "iStridMedPlanJaResult",
                                   "type": "Result",
                                   "show": { "field": "iStridMedPlan", "operator": "eq", "value": "ja" },
-                                  "heading": "Må søke disp"
+                                  "heading": "Må søke disp",
+                                  "children": [
+                                    {
+                                      "id": "infoText",
+                                      "type": "Group",
+                                      "heading": "Her kan du lese om ting som er viktige",
+                                      "text": "<p>Tekst</p>"
+                                    },
+                                    {
+                                       "id": "infoKontaktOss",
+                                       "type": "Group",
+                                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                        }
+                                      ]
                                 },
                                 {
                                   "id": "iStridMedPlanNeiResult",
                                   "type": "Result",
-                                  "heading": "Det er ikke søknadspliktig"
+                                  "heading": "Det er ikke søknadspliktig",
+                                  "children": [
+                                    {
+                                      "id": "infoText",
+                                      "type": "Group",
+                                      "heading": "Her kan du lese om ting som er viktige",
+                                      "text": "<p>Tekst</p>"
+                                    },
+                                    {
+                                       "id": "infoKontaktOss",
+                                       "type": "Group",
+                                       "heading": "Fikk du ikke svar og trenger fortsatt hjelp?", 
+                                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om byggereglene. Vi kan ikke ta stilling til eller vurdere konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                                        }
+                                      ]
                                 }
                               ]
                             }
