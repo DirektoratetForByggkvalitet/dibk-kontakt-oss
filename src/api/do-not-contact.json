@@ -101,8 +101,8 @@
                     {
                        "id": "infoKontaktOssBygggSøk",
                        "type": "Group",
-                       "heading": "Har du spørsmål om ByggSøk?", 
-                       "text": "<p>Du kan sende e-post til <a href=\"mailto:post@dibk.no\">post@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre uker, men i perioder kan svartiden være lengre.</p><p>Du kan også kontakte oss på telefonnummer 22 47 56 00. Sentralbordet er betjent kl 8-15 alle hverdager. Svartjenesten for sentral godkjenning og brukerstøtte for ByggSøk er åpen hverdager kl 9-15. Svartjeneste for spørsmål om byggereglene og er åpen hverdager kl 10-14. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om hvordan å bruke ByggSøk. Vi tar ikke stilling til og vurderer ikke konkrete byggesaker, byggeprosjekter eller tegninger.</p>"
+                       "heading": "Har du spørsmål om søknadsløsningen ByggSøk?", 
+                       "text": "<p>Du kan sende e-post til <a href=\"mailto:byggsok@dibk.no\">byggsok@dibk.no</a>. Henvendelser blir normalt besvart i løpet av tre virkedager, men i perioder kan svartiden være lengre.</p><p>Du kan også ringe brukerstøtte på telefon hverdager mellom 8-15. Tast 2 for å komme til ByggSøk. <h3> Hva kan vi svare på? </h3><p>Direktoratet for byggkvalitet kan svare på spørsmål om søknadsløsningen ByggSøk. Har du spørsmål om andre digitale byggesøknadsløsninger?<a href=\"mailto:https://dibk.no/verktoy-og-veivisere/andre-fagomrader/fellestjenester-bygg/tjenestene\">Du finner kontaktinformasjon til de ulike leverandørene her.</p>"
                         }
                       ]
                 },
@@ -116,7 +116,7 @@
                       "id": "infoText",
                       "type": "Group",
                       "heading": "Leter du etter noe av dette?",
-                      "text": "<p><ul><li><a href=\"https://dibk.no/byggevarer\" target=\"_blank\">Sjekke hvilke krav til dokumentasjon som gjelder ditt produkt </a></li><li><a href=\"https://dibk.no/byggevarer/tipsskjema\" target=\"_blank\">Tipse om ulovlig omsetning av byggevarer</a></li><li><a href=\"https://dibk.no/byggevarer/heis--og-lofteinnretninger\" target=\"_blank\">Regelverk for heis- og løfteinnretninger </a></li><li><a href=\"https://dibk.no/byggevarer/nytt-om-byggevareforordningen\" target=\"_blank\">Nytt om byggevareforordningen</a></li></ul></p>"
+                      "text": "<h3>Byggevarer</h3><p><ul><li><a href=\"https://dibk.no/byggevarer\" target=\"_blank\">Sjekke hvilke krav til dokumentasjon som gjelder ditt produkt </a></li><li><a href=\"https://dibk.no/byggevarer/tipsskjema\" target=\"_blank\">Tipse om ulovlig omsetning av byggevarer</a></li><li><a href=\"https://dibk.no/byggevarer/nytt-om-byggevareforordningen\" target=\"_blank\">Nytt om byggevareforordningen</a></li></ul></p><h3>Heis- og løfteinnretninger</h3><p><ul><li><a href=\"https://dibk.no/byggevarer/heis--og-lofteinnretninger\" target=\"_blank\">Regelverk for heis- og løfteinnretninger </a></li></ul></p>"
                     },
                     {
                        "id": "infoKontaktOss",
@@ -168,7 +168,7 @@
                     {
                       "id": "regelverkHvaVilDuViteMerOm.soknad",
                       "type": "Answer",
-                      "heading": "Byggesøknad og saksbehandling",
+                      "heading": "Planer, byggesøknad eller saksbehandling",
                       "value": "soknad"
                     },
                     {
@@ -198,7 +198,7 @@
                     {
                       "id": "infoText",
                       "type": "Group",
-                      "text": "<h3>Lurer du på om utdanningen og erfaringen til faglig ledelse er tilstrekkelig og relevant?</h3><p>Når et foretak skal erklære ansvar, skal foretaket selv vurdere om den faglige ledelsen har nødvendig kompetanse for jobben. Du/dere må selv vurdere om utdanningen og praksisen til den faglige ledelsen er både tilstrekkelig og relevant for de fagområdene og oppgavene foretaket ønsker å påta seg ansvar for i byggeprosjektet.</p><p>Dersom du ønsker å få vurdert om faglig ledelse har tilstrekkelig utdanning og praksis, kan du/dere vurdere å søke om sentral godkjenning for ansvarsrett. Sentral godkjenning er en frivillig ordning som viser at foretaket oppfyller kravene til faglige kvalifikasjoner, rutiner for kvalitetssikring og seriøsitet. <a href=\"https://dibk.no/sentral-godkjenning\" target=\"_blank\">Les mer om sentral godkjenning på våre nettsider.</a></p><h3>Lurer du på om foretaket ditt kan erklære ansvar?</h3><p>Hvis du vet hvor lang relevant utdanning og relevant praksis den faglige ledelsen har, kan du prøve veiviseren  <a href=\"https://dibk.no/verktoy-og-veivisere/veiviser_ansvar\" target=\"_blank\">”Finn ut om du kan erklære ansvar”</a>. Er foretaket kvalifisert, får du hjelp til å lage en erklæring for ansvarsrett som du kan skrive ut, signere og sende til ansvarlig søker. Mangler foretaket kompetanse, får du hjelp til å finne ut om du kan søke kommunen om ansvarsrett.<br/><br/>Du kan lese mer om krav til utdanning og praksis i <a href=\" https://dibk.no/byggeregler/sak/3/11/innledning\" target=\"_blank\">byggesaksforskriften (SAK10) kapittel 11.</a></p><h3>Har du spørsmål om utenlandsk utdanning og praksis?</h3><p>Der utdanningen og/eller praksis er fra et annet EØS-land, skal utdanningen og/eller praksisen som hovedregel aksepteres på lik linje med norsk. Det er mulig å søke NOKUT om godkjenning av enkelte utdanninger som er gjennomført i utlandet.  <a href=\"https://www.nokut.no/soknader--utdanning-fra-utlandet\" target=\"_blank\">Les mer om dette på NOKUTs nettsider.</a></p>  " 
+                      "text": "<h3>Lurer du på om utdanningen og erfaringen til faglig ledelse er tilstrekkelig og relevant?</h3><p>Når et foretak skal erklære ansvar, skal foretaket selv vurdere om den faglige ledelsen har nødvendig kompetanse for jobben. Du/dere må selv vurdere om utdanningen og praksisen til den faglige ledelsen er både tilstrekkelig og relevant for de fagområdene og oppgavene foretaket ønsker å påta seg ansvar for i byggeprosjektet.</p><p>Dersom du ønsker å få vurdert om faglig ledelse har tilstrekkelig utdanning og praksis, kan du/dere vurdere å søke om sentral godkjenning for ansvarsrett. Sentral godkjenning er en frivillig ordning som viser at foretaket oppfyller kravene til faglige kvalifikasjoner, rutiner for kvalitetssikring og seriøsitet. <a href=\"https://dibk.no/sentral-godkjenning\" target=\"_blank\">Les mer om sentral godkjenning på våre nettsider.</a></p><h3>Lurer du på om foretaket ditt kan erklære ansvar?</h3><p>Hvis du vet hvor lang relevant utdanning og relevant praksis den faglige ledelsen har, kan du prøve veiviseren  <a href=\"https://dibk.no/verktoy-og-veivisere/veiviser_ansvar\" target=\"_blank\">”Finn ut om du kan erklære ansvar”</a>. Er foretaket kvalifisert, får du hjelp til å lage en erklæring for ansvarsrett som du kan skrive ut, signere og sende til ansvarlig søker. Mangler foretaket kompetanse, får du hjelp til å finne ut om du kan søke kommunen om ansvarsrett.<br/><br/>Du kan lese mer om krav til utdanning og praksis i <a href=\" https://dibk.no/byggeregler/sak/3/11/11-3\" target=\"_blank\">byggesaksforskriften (SAK10) kapittel 11.</a></p><h3>Har du spørsmål om utenlandsk utdanning og praksis?</h3><p>Der utdanningen og/eller praksis er fra et annet EØS-land, skal utdanningen og/eller praksisen som hovedregel aksepteres på lik linje med norsk. Det er mulig å søke NOKUT om godkjenning av enkelte utdanninger som er gjennomført i utlandet.  <a href=\"https://www.nokut.no/soknader--utdanning-fra-utlandet\" target=\"_blank\">Les mer om dette på NOKUTs nettsider.</a></p>  " 
                     },
                     {
                        "id": "infoKontaktOss",
@@ -250,7 +250,7 @@
                     {
                       "id": "regelverkHvaLurerDuPå.søknadsplikt",
                       "type": "Answer",
-                      "heading": "Søknader og søknadsplikt",
+                      "heading": "Søknad og søknadsplikt",
                       "value": "søknadsplikt"
                     },
                     {
@@ -327,7 +327,7 @@
                       "id": "infoText",
                       "type": "Group",
                       "heading": "Har du fått et vedtak fra kommunen du er uenig i?",
-                      "text": "<p>Du kan klage på kommunens vedtak. Klagen sender du til kommunen, som da må vurdere saken din på nytt. Hvis kommunen ikke endrer vedtaket sitt, avgjør fylkesmannen saken. Du kan også spørre fylkesmannen om de har behandlet lignende saker tidligere.</p>"
+                      "text": "<p>Du kan klage på vedtaket innen tre uker fra du mottatt det. Klagen sender du til kommunen, som må vurdere saken din på nytt. Hvis kommmunen ikke endrer vedtaket sitt, blir saken avgjør fylkesmannen saken. Dersom kommunen ikke endrer vedtaket sitt, sender de saken videre til fylkesmannen for endelig avgjørelse. Er du usikker på om du har grunn til å klage, kan du spørre fylkesmannen om de har behandlet lignende saker tidligere.</p>"
                     },
                     {
                        "id": "infoKontaktOss",
@@ -423,7 +423,7 @@
                       "id": "infoText",
                       "type": "Group",
                       "heading": "Lurer du på noe av dette?",
-                      "text": "<h3>Hvilke energikrav gjelder for bygninger med over 1000 m2 oppvarmet BRA?</h3><p>Bygninger med oppvarmet bruksareal (BRA) større enn 1000 kvadratmeter skal ha energifleksible varmesystemer, og det skal tilrettelegges for lavtemperatur varmeløsninger. Som en preakseptert ytelse er det gitt at energifleksible systemer dekke minimum 60 prosent av normert netto varmebehov, beregnet etter standarden NS 3031:2014. Det er ikke et spesifikt krav til hvilken energikilde som skal benyttes, så lenge bytte av energikilde er en reell mulighet.</p><p>Kravet om å sette av et minimumsareal for byggets varmesentral gjelder uavhengig av hvilken energikilde man velger å benytte. Hensikten med dette er å gi en reell fleksibilitet i byggets livsløp, slik at man i praksis kan bytte energikilde ved en senere anledning.  <a href=\"https://dibk.no/byggereglene/byggteknisk-forskrift-tek17/14/14-4\" target=\"_blank\">Les mer i TEK17 § 14-4 annet ledd.</a></p><h3> Kan bygninger under 1000 m2 oppvarmes kun med elektrisitet?</h3><p>Ja. Det er tillatt med kun elektrisk oppvarming i en bygning med oppvarmet bruksareal (BRA) under 1000 m2. Det er heller ikke krav om et energifleksibelt distribusjonssystem. Dersom bygget er et småhus, er det normalt et krav om skorstein. Definisjonen på småhus er: enebolig, to- til firemannsbolig, rekkehus, kjedehus og terrassehus til og med tre etasjer, jf. NS 3457-3:2013. <a href=\"https://dibk.no/byggereglene/byggteknisk-forskrift-tek17/14/14-4\" target=\"_blank\">Les mer TEK17 § 14-4 fjerde ledd.</a></p><h3>Når er det krav om pipe/skorstein?</h3><p>Krav om skorstein gjelder alle boenheter i småhus (se definisjon over). Det er <u>kun</u> unntak for skorstein hvis:<ul><li>boenheten har vannbåren varme</li><li>årlig netto energibehov til oppvarming ikke overstiger kravet til passivhus, beregnet etter standarden NS 3700:2013 Kriterier for passivhus og lavenergibygninger - Boligbygninger.</li></ul>En stålpipe kan oppfylle kravet, og det forutsettes at pipa står klar for montering av et ildsted. Det er ikke krav om at ildstedet (f.eks. vedovn) er montert.</p><h3>Er det krav om skorstein ved bruk av solceller eller varmepumpe?</h3><p>Det er krav om at boenheten skal ha skorstein uavhengig om det monteres solceller eller luft-til-luft-varmepumpe i bygget. Dersom boenheten oppføres med for eksempel en varmepumpeløsning som er knyttet til et vannbårent varmesystem, og løsningen dekker minimum behov for romoppvarming i stue eller tilsvarende rom, trenger ikke boenheten å ha skorstein.</p>"
+                      "text": "<h3>Hvilke energikrav gjelder for bygninger med over 1000 m² oppvarmet BRA?</h3><p>Bygninger med oppvarmet bruksareal (BRA) større enn 1000 kvadratmeter skal ha energifleksible varmesystemer, og det skal tilrettelegges for lavtemperatur varmeløsninger. Som en preakseptert ytelse er det gitt at energifleksible systemer dekke minimum 60 prosent av normert netto varmebehov, beregnet etter standarden NS 3031:2014. Det er ikke et spesifikt krav til hvilken energikilde som skal benyttes, så lenge bytte av energikilde er en reell mulighet.</p><p>Kravet om å sette av et minimumsareal for byggets varmesentral gjelder uavhengig av hvilken energikilde man velger å benytte. Hensikten med dette er å gi en reell fleksibilitet i byggets livsløp, slik at man i praksis kan bytte energikilde ved en senere anledning.  <a href=\"https://dibk.no/byggereglene/byggteknisk-forskrift-tek17/14/14-4\" target=\"_blank\">Les mer i TEK17 § 14-4 annet ledd.</a></p><h3> Kan bygninger under 1000 m² oppvarmes kun med elektrisitet?</h3><p>Ja. Det er tillatt med kun elektrisk oppvarming i en bygning med oppvarmet bruksareal (BRA) under 1000 m². Det er heller ikke krav om et energifleksibelt distribusjonssystem. Dersom bygget er et småhus, er det normalt et krav om skorstein. Definisjonen på småhus er: enebolig, to- til firemannsbolig, rekkehus, kjedehus og terrassehus til og med tre etasjer, jf. NS 3457-3:2013. <a href=\"https://dibk.no/byggereglene/byggteknisk-forskrift-tek17/14/14-4\" target=\"_blank\">Les mer TEK17 § 14-4 fjerde ledd.</a></p><h3>Når er det krav om pipe/skorstein?</h3><p>Krav om skorstein gjelder alle boenheter i småhus (se definisjon over). Det er <u>kun</u> unntak for skorstein hvis:<ul><li>boenheten har vannbåren varme</li><li>årlig netto energibehov til oppvarming ikke overstiger kravet til passivhus, beregnet etter standarden NS 3700:2013 Kriterier for passivhus og lavenergibygninger - Boligbygninger.</li></ul>En stålpipe kan oppfylle kravet, og det forutsettes at pipa står klar for montering av et ildsted. Det er ikke krav om at ildstedet (f.eks. vedovn) er montert.</p><h3>Er det krav om skorstein ved bruk av solceller eller varmepumpe?</h3><p>Det er krav om at boenheten skal ha skorstein uavhengig om det monteres solceller eller luft-til-luft-varmepumpe i bygget. Dersom boenheten oppføres med for eksempel en varmepumpeløsning som er knyttet til et vannbårent varmesystem, og løsningen dekker minimum behov for romoppvarming i stue eller tilsvarende rom, trenger ikke boenheten å ha skorstein.</p>"
                     },
                     {
                        "id": "infoKontaktOss",
@@ -488,14 +488,20 @@
                     {
                       "id": "privatHvaTrengerDu.sokeOgVarsle",
                       "type": "Answer",
-                      "heading": "Søke og nabovarsle",
+                      "heading": "Byggesøknad eller nabovarsel",
                       "value": "sokeOgVarsle"
                     },
                     {
                       "id": "privatHvaTrengerDu.kommunalePlaner",
                       "type": "Answer",
                       "heading": "Reguleringsplan eller andre kommunale planer",
-                      "value": "kommunalePlaner"
+                      "value": "privatPlan"
+                    },
+                    {
+                      "id": "privatHvaTrengerDu.uenigIVedtak",
+                      "type": "Answer",
+                      "heading": "Uenig i et vedtak fra kommunen",
+                      "value": "uenigIVedtak"
                     },
                     {
                       "id": "privatHvaTrengerDu.feilMangel",
@@ -506,14 +512,14 @@
                     {
                       "id": "privatHvaTrengerDu.byggeboligpriv",
                       "type": "Answer",
-                      "heading": "Bygge enebolig eller fritidsbolig",
+                      "heading": "Regler for enebolig eller fritidsbolig",
                       "value": "byggeboligpriv"
                     },
                     {
-                      "id": "privatHvaTrengerDu.uenigIVedtak",
+                      "id": "privatHvaTrengerDu.annet",
                       "type": "Answer",
-                      "heading": "Uenig i et vedtak fra kommunen",
-                      "value": "uenigIVedtak"
+                      "heading": "Noe annet",
+                      "value": "annet"
                     }
                   ]
                 },
@@ -538,9 +544,24 @@
                       ]
                 },
                 {
-                  "type": "Reference",
-                  "nodeId": "reguleringsplanResult",
-                  "show": { "field": "privatHvaTrengerDu", "operator": "eq", "value": "kommunalePlaner" }
+                  "id": "privatPlanResult",
+                  "type": "Result",
+                  "show": { "field": "privatHvaTrengerDu", "operator": "eq", "value": "privatPlan" },
+                  "heading": "Kontakt oss",
+                  "children": [
+                    {
+                      "id": "infoText",
+                      "type": "Group",
+                      "heading": "Lurer du på hvordan en reguleringsplan eller annen kommunal plan skal tolkes?",
+                      "text": "<p>Dette er et spørsmål du må stille til kommunen din. Svaret avhenger av bestemmelser i kommunens planer, for eksempel i kommuneplanen eller reguleringsplanen som gjelder for din eiendom. Det er kommunen som er ansvarlig for disse planene.  Kommunen må derfor selv forklare hvordan innholdet i for eksempel kart eller bestemmelser skal tolkes.</p><p>Noen eksempler på hva planene kan regulere er:<ul><li>hvor stort det kan bygges på tomta di</li><li>hvor høyt du kan bygge<li>hvor mange parkeringsplasser du må ha</li><li>byggegrenser eller andre begresninger som bestemmer hvor du har lov å bygge</li></ul></p>"
+                    },
+                    {
+                       "id": "infoKontaktOss",
+                       "type": "Group",
+                       "heading": "Får du ikke svar i vår veiledning eller ved å lese regelverket?", 
+                       "text": "<p>Da må du kontakte kommunen din. Det er kommunen som avgjør om det du vil gjøre er søknadspliktig. Det er også kommunen som skal behandle byggesøknaden din.</p>"
+                        }
+                      ]
                 },
                 {
                   "type": "Reference",
@@ -614,8 +635,7 @@
                             {
                               "id": "infoText",
                               "type": "Group",
-                              "heading": "Her kan du lese om ting som er viktige",
-                              "text": "<h3>Lurer du på hvilke rettigheter du har som boligkjøper?</h3><p>Du kan finne informasjon om dine rettigheter som boligkjøper på <a href=\"https://www.forbrukerradet.no/forside/bolig/kjop-og-salg-av-bolig\" target=\"_blank\">Forbrukerrådets nettsider.</a></p><h3>Lurer du på om en bygning har feil eller mangler?</h3><p>Vi kan ikke vurdere om en bygning har feil eller  mangler. For å finne ut dette bør du først snakke med de som har vært ansvarlig for oppføringen av bygningen. Ansvarlig prosjekterende er de som har planlagt og tegnet bygningen. Ansvarlig prosjekterende kan si noe om hvilket regelverk bygningen er bygget etter, hvilke løsninger som ble valgt og hvordan løsningene oppfyller kravene i regelverket. Hvis det som er planlagt av ansvarlig prosjekterende og det som er bygget ikke er det samme, er det ansvarlig utførende som må forklare hva de har gjort. Ansvarlig utførende er de som har satt opp bygningen.</p><p>Hvis du ikke vet hvem som er ansvarlig prosjekterende og utførende, kan du finne ut dette ved å spørre de som solgte deg boligen eller ved å undersøke byggesaken hos kommunen. Hvis du ikke kommer i kontakt med de ansvarlige eller de ikke vil hjelpe deg, anbefaler vi at du får hjelp av en uavhengig fagperson til å vurdere bygningen. Du kan for eksempel bruke en byggmester eller en takstmann.</p><h3>Mistenker du at det er bygget ulovlig?</h3><p>Hvis du mistenker at det er bygget ulovlig, kan du varsle kommunen. Kommunen kan føre tilsyn mens det bygges eller når ferdigattesten for byggearbeidene er mindre enn fem år gammel. I et tilsyn kan kommunen ta stilling til om tekniske krav er fulgt. Kommunen bestemmer selv hvilke saker de vil føre tilsyn med.</p><h3>Kan du bo i en bolig som har mangler?</h3><p>Du kan bo i boligen så lenge det er gitt ferdigattest eller midlertidig brukstillatelse. Kommunen kan ved et tilsyn finne ut at ferdigattesten eller den midlertidige brukstillatelsen er gitt på feil grunnlag, og trekke den tilbake. Dette må kommunen gjøre som et eget vedtak, som du kan klage på om du ikke er enig i det.</p>"
+                              "text": "<h3>Lurer du på hvilke rettigheter du har som boligkjøper?</h3><p>Du kan finne informasjon om dine rettigheter som boligkjøper på <a href=\"https://www.forbrukerradet.no/forside/bolig/kjop-og-salg-av-bolig\" target=\"_blank\">Forbrukerrådets nettsider.</a></p><h3>Lurer du på om en bygning har feil eller mangler?</h3><p>Vi kan ikke vurdere om en bygning har feil eller  mangler. Skal bygget følge TEK10 eller TEK17 bør du først snakke med de som har vært ansvarlig for oppføringen av bygningen. Ansvarlig prosjekterende er de som har planlagt og tegnet bygningen. Ansvarlig prosjekterende kan si noe om hvilket regelverk bygningen er bygget etter, hvilke løsninger som ble valgt og hvordan løsningene oppfyller kravene i regelverket. Hvis det som er planlagt av ansvarlig prosjekterende og det som er bygget ikke er det samme, er det ansvarlig utførende som må forklare hva de har gjort. Ansvarlig utførende er de som har satt opp bygningen.</p><p>Hvis du ikke vet hvem som er ansvarlig prosjekterende og utførende, kan du finne ut dette ved å spørre de som solgte deg boligen eller ved å undersøke byggesaken hos kommunen. Hvis du ikke kommer i kontakt med de ansvarlige eller de ikke vil hjelpe deg, anbefaler vi at du får hjelp av en uavhengig fagperson til å vurdere bygningen. Du kan for eksempel bruke en byggmester eller en takstmann.</p><h3>Mistenker du at det er bygget ulovlig?</h3><p>Hvis du mistenker at det er bygget ulovlig, kan du varsle kommunen. Kommunen kan føre tilsyn mens det bygges eller når ferdigattesten for byggearbeidene er mindre enn fem år gammel. I et tilsyn kan kommunen ta stilling til om tekniske krav er fulgt. Kommunen bestemmer selv hvilke saker de vil føre tilsyn med.</p><h3>Kan du bo i en bolig som har mangler?</h3><p>Du kan bo i boligen så lenge det er gitt ferdigattest eller midlertidig brukstillatelse. Kommunen kan ved et tilsyn finne ut at ferdigattesten eller den midlertidige brukstillatelsen er gitt på feil grunnlag, og trekke den tilbake. Dette må kommunen gjøre som et eget vedtak, som du kan klage på om du ikke er enig i det.</p>"
                             },
                             {
                                "id": "infoKontaktOss",
@@ -658,7 +678,7 @@
                       "id": "infoText",
                       "type": "Group",
                       "heading": "Skal du bygge enebolig eller fritidsbolig?",
-                      "text": "<p><p>Det er søknadsplikt å bygge enebolig eller fritidsbolig. Du må enten bruke ansvarlige foretak i hele byggeprosessen eller søke om å være selvbygger. Skal du være selvbygger, må du i søknaden om byggetillatelse sannsynliggjøre at arbeidene vil bli utført i samsvar med plan- og bygningsloven, byggesaksforskriften, byggteknisk forskrift og gjeldende planer for byggeområdet.</p><p>Alle nye boliger må følge byggteknisk forskrift (TEK17). Du kan <a href=\"https://dibk.no/boligpilot\" target=\"_blank\">Lenketekstteste ut vår boligveiviser</a> for å få mer informasjon om hvilke regler i TEK17 som kan være relevante for det du skal bygge. Du vil da få opp en markering av all forskriftstekst og veiledningstekst som kan være relevant.</p><h3>Når er det krav om pipe/skorstein?</h3><p>Krav om skorstein gjelder <u>alle</u> boenheter i småhus, og gjelder både for fritidsboliger og helårsboliger. Det er <u>kun</u> unntak for skorstein hvis:<ul><li>boenheten har vannbåren varme</li><li>årlig netto energibehov til oppvarming ikke overstiger kravet til passivhus, beregnet etter standarden NS 3700:2013 Kriterier for passivhus og lavenergibygninger - Boligbygninger.</li></ul>En stålpipe kan oppfylle kravet, og det forutsettes at pipa står klar for montering av et ildsted. Det er ikke krav om at ildstedet (f.eks. vedovn) er montert.</p><h3>Er det krav om skorstein ved bruk av solceller eller varmepumpe?</h3><p>Det er krav om at boenheter skal ha skorstein uavhengig om det monteres solceller eller luft-til-luft-varmepumpe i bygget. Dersom boenheten oppføres med for eksempel en varmepumpeløsning som er knyttet til et vannbårent varmesystem, og løsningen dekker minimum behov for romoppvarming i stue eller tilsvarende rom, trenger ikke boenheten å ha skorstein.</p>"
+                      "text": "<p><p>Det er søknadsplikt å bygge enebolig eller fritidsbolig. Du må enten bruke ansvarlige foretak i hele byggeprosessen eller søke om å være selvbygger. Skal du være selvbygger, må du i søknaden om byggetillatelse sannsynliggjøre at arbeidene vil bli utført i samsvar med plan- og bygningsloven, byggesaksforskriften, byggteknisk forskrift og gjeldende planer for byggeområdet.</p><p>Alle nye boliger må følge byggteknisk forskrift (TEK17). Du kan <a href=\"https://dibk.no/boligpilot\" target=\"_blank\">teste ut vår boligveiviser</a> for å få mer informasjon om hvilke regler i TEK17 som kan være relevante for det du skal bygge. Du vil da få opp en markering av all forskriftstekst og veiledningstekst som kan være relevant.</p><h3>Når er det krav om pipe/skorstein?</h3><p>Krav om skorstein gjelder <u>alle</u> boenheter i småhus, og gjelder både for fritidsboliger og helårsboliger. Det er <u>kun</u> unntak for skorstein hvis:<ul><li>boenheten har vannbåren varme</li><li>årlig netto energibehov til oppvarming ikke overstiger kravet til passivhus, beregnet etter standarden NS 3700:2013 Kriterier for passivhus og lavenergibygninger - Boligbygninger.</li></ul>En stålpipe kan oppfylle kravet, og det forutsettes at pipa står klar for montering av et ildsted. Det er ikke krav om at ildstedet (f.eks. vedovn) er montert.</p><h3>Er det krav om skorstein ved bruk av solceller eller varmepumpe?</h3><p>Det er krav om at boenheter skal ha skorstein uavhengig om det monteres solceller eller luft-til-luft-varmepumpe i bygget. Dersom boenheten oppføres med for eksempel en varmepumpeløsning som er knyttet til et vannbårent varmesystem, og løsningen dekker minimum behov for romoppvarming i stue eller tilsvarende rom, trenger ikke boenheten å ha skorstein.</p>"
                     },
                     {
                        "id": "infoKontaktOss",
@@ -668,6 +688,11 @@
                         }
                       ]
                 },
+                {
+                  "type": "Reference",
+                  "nodeId": "annetResult",
+                  "show": { "field": "privatHvaTrengerDu", "operator": "eq", "value": "annet" }
+                 },
                 {
                   "id": "hvaSkalDuGjøre",
                   "property": "hvaSkalDuGjøre",
@@ -700,16 +725,16 @@
                       "value": "bygge"
                     },
                     {
-                      "id": "hvaSkalDuGjøre.annet",
-                      "type": "Answer",
-                      "heading": "Noe annet",
-                      "value": "annet"
-                    },
-                    {
                       "id": "hvaSkalDuGjøre.endreAvkjørsel",
                       "type": "Answer",
                       "heading": "Lage vei, avkjørsel eller biloppstilllngsplass",
                       "value": "endreAvkjørsel"
+                    },
+                    {
+                      "id": "hvaSkalDuGjøre.annet",
+                      "type": "Answer",
+                      "heading": "Noe annet",
+                      "value": "annet"
                     }
                   ]
                 },
@@ -722,7 +747,6 @@
                     {
                       "id": "infoText",
                       "type": "Group",
-                      "heading": "Her kan du lese om ting som er viktige",
                       "text": "<h3>Hva slags veier er unntatt søknadsplikt?</h3><p>Interne veier og biloppstillingsplasser som er minimum 1,0 meter fra nabogrensen er unntatt søknadsplikt. Dette forutsetter at veien eller biloppstillingsplassen er til eiendommens bruk.</p><p>Med intern vei menes adkomstvei eller vei mellom forskjellige byggverk på eiendommen. For landsbrukseiendommer er oppstillingsplasser for landbruksmaskiner til bruk på eiendommen også unntatt søknadsplikt.</p><h3>Trenger du ny eller endret avkjørsel?</h3><p>Det er søknadspliktig å endre en avkjørsel mot vei. Trenger du ny eller endret avkjørsel mot kommunal vei, kontakter du kommunen din. Trenger du ny eller endret avkjørsel mot riks- eller fylkesvei, kan du bruke <a href=\"https://www.vegvesen.no/trafikkinformasjon/langs-veien/soknad-om-avkjorsel/send-inn-soknad-om-avkjorsel\" target=\"_blank\">Statens Vegvesens digitale søknadsløsning.</a></p><h3>Får du ikke svar i vår veiledning eller ved å lese regelverket?</h3><p>Da må du kontakte kommunen din. Det er kommunen som avgjør om det du vil gjøre er søknadspliktig. Det er også kommunen som skal behandle byggesøknaden din.</p>"
                     },
                     {
@@ -816,7 +840,13 @@
                 {
                   "id": "annetResult",
                   "type": "Result",
-                  "show": { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "annet" },
+                  "show": {
+                    "type": "or",
+                    "clauses": [
+                      { "field": "hvaSkalDuGjøre", "operator": "eq", "value": "annet" },
+                      { "field": "privatHvaTrengerDu", "operator": "eq", "value": "annet" }
+                    ]
+                  },
                   "heading": "Kontakt oss",
                   "children": [
                     {
@@ -887,7 +917,7 @@
                       "id": "infoText",
                       "type": "Group",
                       "heading": "Lurer du på noe av dette?",
-                      "text": "<h3>Hvor finner jeg ny veiledning om grad av utnytting?</h3><p>Veiledningen til kapittel 5 og 6 i byggteknisk forskrift kom i juni 2019 i en oppusset og mer klarspråklig versjon. Det er også laget nye illustrasjoner som forklarer regelverket på en mer tydelig måte. <a href=\"https://dibk.no/om-oss/Nyhetsarkiv/redigert-veiledning-til-grad-av-utnytting\" target=\"_blank\">Les mer her.</a></p><h3>Gjelder det tolkning av grad av utnytting i en konkret plan?</h3><p>Vi kan ikke svare på hvordan grad av utnytting skal tolkes i en konkret reguleringsplan eller byggesak. Dette må kommunen selv gjøre. Det er viktig at planene blir tolket likt hver gang for å sikre likebehandling. Er dere usikre på hvordan en plan skal tolkes, bør dere kontakte de i kommunen som har ansvar for kommunal planlegging.</p><h3>Trenger dere veiledningsmateriell om grad av utnytting for privatpersoner?</h3><p>Veiviseren <a href=\"https://dibk.no/hvorstortkandubygge\" target=\"_blank\">”Hvor stort kan du bygge?”</a> er laget for å hjelpe privatpersoner og andre med å finne tillatt grad av utnytting på egen eiendom.</p>"
+                      "text": "<h3>Hvor finner jeg ny veiledning om grad av utnytting?</h3><p>Veiledningen til kapittel 5 og 6 i byggteknisk forskrift kom i juni 2019 i en oppusset og mer klarspråklig versjon. Det er også laget nye illustrasjoner som forklarer regelverket på en mer tydelig måte. <a href=\"https://dibk.no/om-oss/Nyhetsarkiv/redigert-veiledning-til-grad-av-utnytting\" target=\"_blank\">Les mer her.</a></p><h3>Gjelder det tolkning av grad av utnytting i en konkret plan?</h3><p>Vi kan ikke svare på hvordan grad av utnytting skal tolkes i en konkret reguleringsplan eller byggesak. Dette må kommunen selv gjøre. Det er viktig at planene blir tolket likt hver gang for å sikre likebehandling. Er du usikker på hvordan en plan skal tolkes, kan du kontakte de i kommunen som har ansvar for kommunal planlegging.</p><h3>Trenger du veiledningsmateriell om grad av utnytting for privatpersoner?</h3><p>Veiviseren <a href=\"https://dibk.no/hvorstortkandubygge\" target=\"_blank\">”Hvor stort kan du bygge?”</a> er laget for å hjelpe privatpersoner og andre med å finne tillatt grad av utnytting på egen eiendom.</p>"
                     },
                     {
                        "id": "infoKontaktOss",
@@ -907,7 +937,7 @@
                       "id": "infoText",
                       "type": "Group",
                       "heading": "Ser du etter veiledning om planer og planlegging?",
-                      "text": "<p>Planavdelingen i Kommunal- og moderniseringsdepartementet er øverste myndighet for reguleringsplaner. De har blant annet veiledere om reguleringsplaner, konsekvensutredninger og kommunal behandling av små vindkraftanlegg. <a href=\"https://www.regjeringen.no/no/tema/plan-bygg-og-eiendom/plan--og-bygningsloven/plan/veiledning-om-planlegging/pblveiledere/id2009055\" target=\"_blank\">Les mer her. </a></p><h3>Har du spørsmål om tolkning av en konkret plan?</h3><p>Vi kan ikke svare på hvordan en konkret reguleringsplan eller byggesak skal tolkes eller vurdere om det kan gis dispensasjon fra en plan. Dette må kommunen selv gjøre. Det er viktig at planene blir tolket likt hver gang for å sikre likebehandling. Er dere usikre på hvordan en plan skal tolkes, bør dere kontakte de i kommunen som har ansvar for kommunal planlegging.</p>"
+                      "text": "<p>Planavdelingen i Kommunal- og moderniseringsdepartementet er øverste myndighet for reguleringsplaner. De har blant annet veiledere om reguleringsplaner, konsekvensutredninger og kommunal behandling av små vindkraftanlegg. <a href=\"https://www.regjeringen.no/no/tema/plan-bygg-og-eiendom/plan--og-bygningsloven/plan/veiledning-om-planlegging/pblveiledere/id2009055\" target=\"_blank\">Les mer her. </a></p><h3>Har du spørsmål om tolkning av en konkret plan?</h3><p>Vi kan ikke svare på hvordan en konkret reguleringsplan eller byggesak skal tolkes eller vurdere om det kan gis dispensasjon fra en plan. Dette må kommunen selv gjøre. Det er viktig at planene blir tolket likt hver gang for å sikre likebehandling. Er du usikker på hvordan en plan skal tolkes, kan du kontakte de i kommunen som har ansvar for kommunal planlegging.</p>"
                     },
                     {
                        "id": "infoKontaktOss",
@@ -1032,7 +1062,7 @@
                             {
                               "id": "infoText",
                               "type": "Group",
-                              "heading": "Her kan du lese om ting som er viktige",
+                              "heading": "",
                               "text": "<p>Tekst</p>"
                             },
                             {
